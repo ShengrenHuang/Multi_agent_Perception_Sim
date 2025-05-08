@@ -1,77 +1,46 @@
-# ros_gz_project_template
-A template project integrating ROS 2 and Gazebo simulator.
+# Multi-Agent Perception Simulation
 
-## Included packages
+This project integrates **ROS 2 Jazzy** and the **Gazebo Harmonic** simulator to simulate and visualize multi-agent perception
 
-* `ros_gz_example_description` - holds the sdf description of the simulated system and any other assets.
+Based on the official template:  
+👉 https://github.com/gazebosim/ros_gz_project_template
 
-* `ros_gz_example_gazebo` - holds gazebo specific code and configurations. Namely this is where systems end up.
+---
 
-* `ros_gz_example_application` - holds ros2 specific code and configurations.
+## 🖥️ Environment
 
-* `ros_gz_example_bringup` - holds launch files and high level utilities.
+- **Operating System**: Ubuntu 24.04
+- **ROS 2**: Jazzy (C++ primary)
+- **Gazebo**: Harmonic
+---
 
+## 📦 Installation
 
-## Install
+Clone the repository:
 
-For using the template with Gazebo Fortress switch to the `fortress` branch of this repository, otherwise use the default branch `main` for Gazebo Harmonic onwards.
+```bash
+git clone https://github.com/ShengrenHuang/Multi_agent_Perception_Sim.git
+cd Multi_agent_Perception_Sim
+```
+### ROS 2 Jazzy
+Please refer to [ROS2 Jazzy](https://docs.ros.org/en/jazzy/Installation.html).
 
-### Requirements
+### Gazebo Harmonic 
+Please refer to [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install/)
+Recommend to use binary installation.
 
-1. Choose a ROS and Gazebo combination https://gazebosim.org/docs/latest/ros_installation
+### Build
+```bash
+export GZ_VERSION=harmonic
 
-   Note: If you're using a specific and unsupported Gazebo version with ROS 2, you might need to set the `GZ_VERSION` environment variable, for example:
+source /opt/ros/jazzy/setup.bash
 
-    ```bash
-    export GZ_VERSION=harmonic
-    ```
-    Also need to build [`ros_gz`](https://github.com/gazebosim/ros_gz) and [`sdformat_urdf`](https://github.com/ros/sdformat_urdf) from source if binaries are not available for your chosen combination.
+colcon build --symlink-install
 
-1. Install necessary tools
+source install/setup.bash
+```
 
-    ```bash
-    sudo apt install python3-vcstool python3-colcon-common-extensions git wget
-    ```
-
-### Use as template
-Directly `Use this template` and create your project repository on Github.
-
-Or start by creating a workspace and cloning the template repository:
-
-   ```bash
-   mkdir -p ~/template_ws/src
-   cd ~/template_ws/src
-   git clone https://github.com/gazebosim/ros_gz_project_template.git
-   ```
-
-## Usage
-
-1. Install dependencies
-
-    ```bash
-    cd ~/template_ws
-    source /opt/ros/$ROS_DISTRO/setup.bash
-    sudo rosdep init
-    rosdep update
-    rosdep install --from-paths src --ignore-src -r -i -y --rosdistro <ROS_DISTRO>
-    ```
-
-1. Build the project
-
-    ```bash
-    colcon build --cmake-args -DBUILD_TESTING=ON
-    ```
-
-1. Source the workspace
-
-    ```bash
-    . ~/template_ws/install/setup.sh
-    ```
-
-1. Launch the simulation
-
-    ```bash
-    ros2 launch ros_gz_example_bringup diff_drive.launch.py
-    ```
-
-For a more detailed guide on using this template see [documentation](https://gazebosim.org/docs/latest/ros_gz_project_template_guide).
+## Quick start
+```bash
+ros2 launch ros_gz_example_bringup diff_drive.launch.py
+```
