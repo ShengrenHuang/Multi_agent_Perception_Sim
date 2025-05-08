@@ -1,6 +1,6 @@
 # Multi-Agent Perception Simulation
 
-This project integrates **ROS 2 Jazzy** and the **Gazebo Harmonic** simulator to simulate and visualize multi-agent perception
+This project integrates **ROS 2 Jazzy** and the **Gazebo Harmonic** simulator to simulate and visualize multi-agent perception.
 
 Based on the official template:  
 👉 https://github.com/gazebosim/ros_gz_project_template
@@ -27,6 +27,7 @@ Please refer to [ROS2 Jazzy](https://docs.ros.org/en/jazzy/Installation.html).
 
 ### Gazebo Harmonic 
 Please refer to [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install/)
+
 Recommend to use binary installation.
 
 ### Build
