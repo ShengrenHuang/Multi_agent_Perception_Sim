@@ -26,7 +26,7 @@ cd Multi_agent_Perception_Sim
 Please refer to [ROS2 Jazzy](https://docs.ros.org/en/jazzy/Installation.html).
 
 ### Gazebo Harmonic 
-Please refer to [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install/)
+Please refer to [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install/).
 
 Recommend to use binary installation.
 
