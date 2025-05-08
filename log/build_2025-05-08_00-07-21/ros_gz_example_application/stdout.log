@@ -1,0 +1,27 @@
+[ 33%] Built target listener
+[ 66%] Built target talker
+[ 83%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o[0m
+[100%] [32m[1mLinking CXX executable image_processor_node[0m
+[100%] Built target image_processor_node
+-- Install configuration: ""
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/talker
+-- Set non-toolchain portion of runtime path of "/home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/talker" to ""
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/listener
+-- Set non-toolchain portion of runtime path of "/home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/listener" to ""
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/image_processor_node
+-- Set non-toolchain portion of runtime path of "/home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/image_processor_node" to ""
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_application
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_application
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/ament_prefix_path.sh
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/ament_prefix_path.dsv
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/path.sh
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/path.dsv
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.bash
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.sh
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.zsh
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.dsv
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/package.dsv
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/packages/ros_gz_example_application
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/cmake/ros_gz_example_applicationConfig.cmake
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/cmake/ros_gz_example_applicationConfig-version.cmake
+-- Installing: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/package.xml

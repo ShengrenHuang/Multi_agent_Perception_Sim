@@ -1,0 +1,32 @@
+[0.005s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.023s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.166s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.180s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.184s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.190s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.196s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.226s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.227s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.278s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.312s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.322s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[0.343s] -- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)
+[0.396s] -- Configuring done (0.4s)
+[0.408s] -- Generating done (0.0s)
+[0.411s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[0.436s] [ 16%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o[0m
+[0.441s] [ 33%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_lambda_function.cpp.o[0m
+[0.443s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_lambda_function.cpp.o[0m
+[0.566s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:10:10:[m[K [01;31m[Kfatal error: [m[Kcv_bridge/cv_bridge.h: No such file or directory
+[0.566s]    10 | #include [01;31m[K<cv_bridge/cv_bridge.h>[m[K
+[0.566s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.566s] compilation terminated.
+[0.572s] gmake[2]: *** [CMakeFiles/image_processor_node.dir/build.make:76: CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o] Error 1
+[0.572s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/image_processor_node.dir/all] Error 2
+[0.572s] gmake[1]: *** Waiting for unfinished jobs....
+[2.263s] [ 66%] [32m[1mLinking CXX executable talker[0m
+[2.344s] [ 66%] Built target talker
+[3.580s] [ 83%] [32m[1mLinking CXX executable listener[0m
+[3.697s] [ 83%] Built target listener
+[3.698s] gmake: *** [Makefile:146: all] Error 2
+[3.700s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

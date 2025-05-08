@@ -1,0 +1,17 @@
+[0.005s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.041s] [ 33%] Built target talker
+[0.042s] [ 66%] Built target listener
+[0.044s] [ 83%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o[0m
+[1.217s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:68:66:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.217s]    68 |         rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr [01;31m[Ksubscriber_ㄤ[m[K
+[1.217s]       |                                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[1.217s]       |                                                                               [32m[K;[m[K
+[1.223s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:[m[K In constructor ‘[01m[KImagePublisher::[01;32m[KImagePublisher[m[K()[m[K’:
+[1.223s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:25:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscriber_ㄤ[m[K’?
+[1.223s]    25 |             [01;31m[Ksubscriber_[m[K = this->create_subscription<sensor_msgs::msg::Image>(
+[1.223s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[1.223s]       |             [32m[Ksubscriber_ㄤ[m[K
+[2.272s] gmake[2]: *** [CMakeFiles/image_processor_node.dir/build.make:76: CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o] Error 1
+[2.272s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/image_processor_node.dir/all] Error 2
+[2.272s] gmake: *** [Makefile:146: all] Error 2
+[2.274s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

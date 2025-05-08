@@ -1,0 +1,3 @@
+[ 33%] Built target talker
+[ 66%] Built target listener
+[ 83%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o[0m
