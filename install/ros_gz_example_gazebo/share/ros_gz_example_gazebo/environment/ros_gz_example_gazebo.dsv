@@ -1,2 +1,1 @@
-prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share/ros_gz_example_gazebo/worlds
-prepend-non-duplicate;GZ_SIM_SYSTEM_PLUGIN_PATH;lib/ros_gz_example_gazebo/
+/home/cirl/ros_gz_project_template-main/build/ros_gz_example_gazebo/ament_cmake_environment_hooks/ros_gz_example_gazebo.dsv

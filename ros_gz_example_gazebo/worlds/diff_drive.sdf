@@ -144,7 +144,7 @@
 
     <include>
         <name>Ground_Robot</name>
-        <pose>0 0 0 0 0 0</pose>
+        <pose>0 0 3 0 0 0</pose>
         <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/NUS_SEDS_OMNIDIRECTIONAL_GROUND_VEHICLE_VISUALS_ONLY</uri>
     </include>
 
@@ -153,8 +153,23 @@
       <include merge="true">
         <uri>package://ros_gz_example_description/models/x3</uri>
       </include>
+      <pose>0 0 10 0 0 0</pose>
+    </model>
+
+
+
+    <!--
+    Terrain
+    -->
+
+
+    <model name="terrain">
+      <include merge="true">
+        <uri>package://ros_gz_example_description/models/terrain_1</uri>
+      </include>
       <pose>0 0 2 0 0 0</pose>
     </model>
+
 
 
 

@@ -1,0 +1,1 @@
+/home/cirl/ros_gz_project_template-main/build/velocity_pub/ament_cmake_environment_hooks/local_setup.sh

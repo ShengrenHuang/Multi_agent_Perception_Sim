@@ -1,2 +1,1 @@
-ament_prepend_unique_value GZ_SIM_RESOURCE_PATH "$AMENT_CURRENT_PREFIX/share/ros_gz_example_gazebo/worlds"
-ament_prepend_unique_value GZ_SIM_PLUGIN_PATH "$AMENT_CURRENT_PREFIX/lib/ros_gz_example_gazebo"
+/home/cirl/ros_gz_project_template-main/build/ros_gz_example_gazebo/ament_cmake_environment_hooks/ros_gz_example_gazebo.sh

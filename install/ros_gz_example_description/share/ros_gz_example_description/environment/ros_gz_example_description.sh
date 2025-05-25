@@ -1,2 +1,1 @@
-ament_prepend_unique_value GZ_SIM_RESOURCE_PATH "$AMENT_CURRENT_PREFIX/share/ros_gz_example_description/models"
-
+/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description/ament_cmake_environment_hooks/ros_gz_example_description.sh

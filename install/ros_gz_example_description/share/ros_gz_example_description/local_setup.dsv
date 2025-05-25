@@ -1,4 +1,1 @@
-source;share/ros_gz_example_description/environment/ament_prefix_path.sh
-source;share/ros_gz_example_description/environment/path.sh
-source;share/ros_gz_example_description/environment/ros_gz_example_description.sh
-source;share/ros_gz_example_description/environment/ros_gz_example_description.dsv
+/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description/ament_cmake_environment_hooks/local_setup.dsv

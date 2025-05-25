@@ -55,3 +55,6 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+
+# uninstall files installed using the symlink install functions
+include("/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
