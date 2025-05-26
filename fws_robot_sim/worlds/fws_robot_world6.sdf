@@ -1,0 +1,1560 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <plugin name='gz::sim::systems::TriggeredPublisher' filename='gz-sim-triggered-publisher-system'>
+      <input type='gz.msgs.Int32' topic='/keyboard/keypress'>
+        <match field='data'>16777234</match>
+      </input>
+      <output type='gz.msgs.Twist' topic='/model/x3/cmd_vel'>linear: {y: 1.0}</output>
+    </plugin>
+    <plugin name='gz::sim::systems::TriggeredPublisher' filename='gz-sim-triggered-publisher-system'>
+      <input type='gz.msgs.Int32' topic='/keyboard/keypress'>
+        <match field='data'>16777235</match>
+      </input>
+      <output type='gz.msgs.Twist' topic='/model/x3/cmd_vel'>linear: {x: 1.0}</output>
+    </plugin>
+    <plugin name='gz::sim::systems::TriggeredPublisher' filename='gz-sim-triggered-publisher-system'>
+      <input type='gz.msgs.Int32' topic='/keyboard/keypress'>
+        <match field='data'>16777236</match>
+      </input>
+      <output type='gz.msgs.Twist' topic='/model/x3/cmd_vel'>linear: {y: -1.0}</output>
+    </plugin>
+    <plugin name='gz::sim::systems::TriggeredPublisher' filename='gz-sim-triggered-publisher-system'>
+      <input type='gz.msgs.Int32' topic='/keyboard/keypress'>
+        <match field='data'>16777237</match>
+      </input>
+      <output type='gz.msgs.Twist' topic='/model/x3/cmd_vel'>linear: {x: -1.0}</output>
+    </plugin>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='cylinder'>
+      <pose>1 -0.80000000000000004 0.14999942832637039 -1.851572006834989e-19 -5.9588704427712002e-19 1.3613530880332601e-20</pose>
+      <link name='cylinder_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.14499999999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.14499999999999999</iyy>
+            <iyz>0</iyz>
+            <izz>0.125</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='cylinder_collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.20000000000000001</radius>
+              <length>0.29999999999999999</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='cylinder_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.20000000000000001</radius>
+              <length>0.29999999999999999</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box'>
+      <pose>-0.69999999999999996 0.5 0.14999942692161244 -3.4495969753094586e-19 -2.6505143524190671e-19 1.039011443229859e-20</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>0.29999999999999999 0.29999999999999999 0.29999999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>0.29999999999999999 0.29999999999999999 0.29999999999999999</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='terrain_1'>
+      <pose>0 0 2 0 0 0</pose>
+      <static>true</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model://terrain_1/media/terrain_1.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.100000001 0.100000001 0.100000001 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://terrain_1/media/Textures/Grass.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model://terrain_1/media/terrain_1.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='road_1'>
+      <pose>0 0 10 0 0 0</pose>
+      <static>true</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model://road_1/media/road4.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.100000001 0.100000001 0.100000001 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://road_1/media/Textures/asphalt.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model://road_1/media/road4.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='house_1'>
+      <pose>-11.261050224304199 0 10 0 0 0</pose>
+      <static>true</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model://house_1/media/house.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.100000001 0.100000001 0.100000001 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://house_1/media/Textures/house.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model://house_1/media/house.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='rock_1'>
+      <pose>5 10 10 0 0 0</pose>
+      <static>true</static>
+      <link name='body'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model://rock_1/media/Rock2.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.100000001 0.100000001 0.100000001 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>model://rock_1/media/Textures/black-stone.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model://rock_1/media/Rock2.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Breyer_Horse_Of_The_Year_2015'>
+      <link name='link_0'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/.gz/fuel/fuel.gazebosim.org/googleresearch/models/breyer_horse_of_the_year_2015/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision_0'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cirl/.gz/fuel/fuel.gazebosim.org/googleresearch/models/breyer_horse_of_the_year_2015/1/meshes/model.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>5.0173371035878302 9.9889863138118447 2.0008197830971781 0.2413575871880291 -0.19386616703049561 0.08257064703705215</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='x3'>
+      <frame name='_merged__x3__model__' attached_to='X3/base_link'>
+        <pose relative_to='__model__'>0 0 0.053302000000000002 0 0 0</pose>
+      </frame>
+      <link name='X3/base_link'>
+        <pose>0 0 0.053302000000000002 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1.5</mass>
+          <inertia>
+            <ixx>0.034756299999999997</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.070000000000000007</iyy>
+            <iyz>0</iyz>
+            <izz>0.097699999999999995</izz>
+          </inertia>
+        </inertial>
+        <collision name='X3/base_link_inertia_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.46999999999999997 0.46999999999999997 0.11</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='X3/base_link_inertia_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/x3%20uav/6/files/meshes/x3.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='downward_camera' type='camera'>
+          <pose>0 0 -0.20000000000000001 3.1415926535897931 1.5707926536359933 3.1415926535897931</pose>
+          <topic>__default__</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <camera name='__default__'>
+            <pose>0 0 0 0 0 0</pose>
+            <horizontal_fov>1.0469999999999999</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>240</height>
+              <format>RGB_INT8</format>
+              <anti_aliasing>4</anti_aliasing>
+            </image>
+            <camera_info_topic>__default__</camera_info_topic>
+            <trigger_topic></trigger_topic>
+            <triggered>false</triggered>
+            <clip>
+              <near>0.10000000000000001</near>
+              <far>100</far>
+            </clip>
+            <save enabled='false'>
+              <path>__default__</path>
+            </save>
+            <visibility_mask>4294967295</visibility_mask>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <distortion>
+              <k1>0</k1>
+              <k2>0</k2>
+              <k3>0</k3>
+              <p1>0</p1>
+              <p2>0</p2>
+              <center>0.5 0.5</center>
+            </distortion>
+            <lens>
+              <type>stereographic</type>
+              <scale_to_hfov>true</scale_to_hfov>
+              <cutoff_angle>1.5707963267948966</cutoff_angle>
+              <env_texture_size>256</env_texture_size>
+            </lens>
+            <optical_frame_id></optical_frame_id>
+          </camera>
+        </sensor>
+        <gravity>false</gravity>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='X3/rotor_0'>
+        <pose>0.12999999999999989 -0.22 0.076302000000000092 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.0050000000000000001</mass>
+          <inertia>
+            <ixx>9.7499999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.1704099999999999e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.2604100000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='X3/rotor_0_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.10000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='X3/rotor_0_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/x3%20uav/6/files/meshes/propeller_ccw.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>false</gravity>
+        <velocity_decay/>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='X3/rotor_0_joint' type='revolute'>
+        <child>X3/rotor_0</child>
+        <parent>X3/base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <link name='X3/rotor_1'>
+        <pose>-0.12999999999999989 0.20000000000000001 0.076302000000000092 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.0050000000000000001</mass>
+          <inertia>
+            <ixx>9.7499999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.1704099999999999e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.2604100000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='X3/rotor_1_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.10000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='X3/rotor_1_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/x3%20uav/6/files/meshes/propeller_ccw.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>false</gravity>
+        <velocity_decay/>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='X3/rotor_1_joint' type='revolute'>
+        <child>X3/rotor_1</child>
+        <parent>X3/base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <link name='X3/rotor_2'>
+        <pose>0.12999999999999989 0.22 0.076302000000000092 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.0050000000000000001</mass>
+          <inertia>
+            <ixx>9.7499999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.1704099999999999e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.2604100000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='X3/rotor_2_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.10000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='X3/rotor_2_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/x3%20uav/6/files/meshes/propeller_cw.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Blue</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>false</gravity>
+        <velocity_decay/>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='X3/rotor_2_joint' type='revolute'>
+        <child>X3/rotor_2</child>
+        <parent>X3/base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <link name='X3/rotor_3'>
+        <pose>-0.12999999999999989 -0.20000000000000001 0.076302000000000092 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.0050000000000000001</mass>
+          <inertia>
+            <ixx>9.7499999999999998e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.1704099999999999e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.2604100000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='X3/rotor_3_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0050000000000000001</length>
+              <radius>0.10000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='X3/rotor_3_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/x3%20uav/6/files/meshes/propeller_cw.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>false</gravity>
+        <velocity_decay/>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='X3/rotor_3_joint' type='revolute'>
+        <child>X3/rotor_3</child>
+        <parent>X3/base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-10000000000000000</lower>
+            <upper>10000000000000000</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='gz::sim::systems::PosePublisher' filename='gz-sim-pose-publisher-system'>
+        <publish_link_pose>true</publish_link_pose>
+      </plugin>
+      <plugin name='gz::sim::systems::OdometryPublisher' filename='gz-sim-odometry-publisher-system'>
+        <odom_frame>x3/odom</odom_frame>
+        <robot_base_frame>x3</robot_base_frame>
+      </plugin>
+      <plugin name='gz::sim::systems::VelocityControl' filename='gz-sim-velocity-control-system'>
+        <model_name>x3</model_name>
+        <topic>/model/x3/cmd_vel</topic>
+      </plugin>
+      <pose>5 0 5 0 0 0</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='Tree1'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='branch'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Branch</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <double_sided>true</double_sided>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/</uri>
+              <name>PineTree/Branch</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/branch_2_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <visual name='bark'>
+          <geometry>
+            <mesh>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/meshes/pine_tree.dae</uri>
+              <submesh>
+                <name>Bark</name>
+              </submesh>
+            </mesh>
+          </geometry>
+          <material>
+            <diffuse>1 1 1 1</diffuse>
+            <script>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/scripts/</uri>
+              <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/</uri>
+              <name>PineTree/Bark</name>
+            </script>
+            <pbr>
+              <metal>
+                <albedo_map>https://fuel.gazebosim.org/1.0/openrobotics/models/pine tree/6/files/materials/textures/bark_diffuse.png</albedo_map>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 10 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='fws_robot'>
+      <link name='base_footprint'>
+        <inertial>
+          <pose>-0.0030344827586206899 0 0.022448275862068968 0 0 0</pose>
+          <mass>1.45</mass>
+          <inertia>
+            <ixx>0.00050275862068965501</ixx>
+            <ixy>0</ixy>
+            <ixz>0.00013002758620689659</ixz>
+            <iyy>0.00037960689655172408</iyy>
+            <iyz>0</iyz>
+            <izz>0.00035004827586206902</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/base/base_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.050000000000000003</mu>
+                <mu2>0.050000000000000003</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_footprint_fixed_joint_lump__lidar_base_link_collision_1'>
+          <pose>-0.021999999999999999 0 0.035000000000000003 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/lidar_base/YDlidar_base.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.050000000000000003</mu>
+                <mu2>0.050000000000000003</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_footprint_fixed_joint_lump__lidar_head_link_collision_2'>
+          <pose>0 0 0.035000000000000003 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/lidar_head/YDlidar_head.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.050000000000000003</mu>
+                <mu2>0.050000000000000003</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/base/base_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_footprint_fixed_joint_lump__lidar_base_link_visual_1'>
+          <pose>-0.021999999999999999 0 0.035000000000000003 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/lidar_base/YDlidar_base.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_footprint_fixed_joint_lump__lidar_head_link_visual_2'>
+          <pose>0 0 0.035000000000000003 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/lidar_head/YDlidar_head.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <sensor name='lidar_head_link' type='gpu_lidar'>
+          <pose>0 0 0.035000000000000003 0 0 0</pose>
+          <topic>scan</topic>
+          <update_rate>30</update_rate>
+          <enable_metrics>false</enable_metrics>
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>2800</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.1400000000000001</min_angle>
+                <max_angle>3.1400000000000001</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+                <resolution>0.10000000000000001</resolution>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.20000000000000001</min>
+              <max>30</max>
+              <resolution>0.01</resolution>
+            </range>
+            <noise>
+              <type>none</type>
+              <mean>0</mean>
+              <stddev>0</stddev>
+            </noise>
+            <visibility_mask>4294967295</visibility_mask>
+          </lidar>
+        </sensor>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='fl_steering_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>base_footprint</parent>
+        <child>fl_steering_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.1000000000000001</lower>
+            <upper>2.1000000000000001</upper>
+            <effort>5</effort>
+            <velocity>6.2800000000000002</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='fl_steering_link'>
+        <pose>0.076999999999999985 0.030999999999999996 -0.0039999999999995595 -1.1678386993505488e-32 7.5419622231879489e-33 3.6123350663366912e-20</pose>
+        <inertial>
+          <pose>0 0 -0.02 0 0 0</pose>
+          <mass>0.14999999999999999</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.0000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='fl_steering_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/suspension/sus_link.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='fl_steering_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/suspension/fl_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='fl_wheel_joint' type='revolute'>
+        <pose>0 0 -6.9388939039072284e-18 0 0 0</pose>
+        <parent>fl_steering_link</parent>
+        <child>fl_wheel_link</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>1.5</effort>
+            <velocity>20</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='fl_wheel_link'>
+        <pose>0.076999999999999999 0.051999999999999998 -0.028999999999999915 -2.9481774476815234e-32 -5.3476324361796482e-13 -3.141592567179587</pose>
+        <inertial>
+          <pose>0 -0.0070000000000000001 0 0 0 0</pose>
+          <mass>0.050000000000000003</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.8e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1.0000000000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='fl_wheel_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/wheel/robot_wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1.2</mu>
+                <mu2>1.2</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='fl_wheel_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/wheel/wheel_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='fr_steering_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>base_footprint</parent>
+        <child>fr_steering_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.1000000000000001</lower>
+            <upper>2.1000000000000001</upper>
+            <effort>5</effort>
+            <velocity>6.2800000000000002</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='fr_steering_link'>
+        <pose>0.076999999999999985 -0.031000000000000003 -0.0039999999999995595 3.7250003892010492e-33 7.541962223188057e-33 2.6543407895976631e-20</pose>
+        <inertial>
+          <pose>0 0 -0.02 0 0 0</pose>
+          <mass>0.14999999999999999</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.0000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='fr_steering_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/suspension/sus_link.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='fr_steering_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/suspension/fr_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='fr_wheel_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>fr_steering_link</parent>
+        <child>fr_wheel_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>1.5</effort>
+            <velocity>20</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='fr_wheel_link'>
+        <pose>0.076999999999999999 -0.052000000000000011 -0.028999999999999915 -7.99487511559311e-33 5.3461527217890021e-13 2.6543407895976631e-20</pose>
+        <inertial>
+          <pose>0 -0.0070000000000000001 0 0 0 0</pose>
+          <mass>0.050000000000000003</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.8e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1.0000000000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='fr_wheel_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/wheel/robot_wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1.2</mu>
+                <mu2>1.2</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='fr_wheel_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/wheel/wheel_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='rl_steering_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>base_footprint</parent>
+        <child>rl_steering_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.1000000000000001</lower>
+            <upper>2.1000000000000001</upper>
+            <effort>5</effort>
+            <velocity>6.2800000000000002</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='rl_steering_link'>
+        <pose>-0.077000000000000013 0.030999999999999996 -0.0039999999999995595 4.2440301737646005e-33 7.5419622231879475e-33 3.6323923890253996e-20</pose>
+        <inertial>
+          <pose>0 0 -0.02 0 0 0</pose>
+          <mass>0.14999999999999999</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.0000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rl_steering_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/suspension/sus_link.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='rl_steering_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/suspension/rl_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='rl_wheel_joint' type='revolute'>
+        <pose>-1.3877787807814457e-17 0 -6.9388939039072284e-18 0 0 0</pose>
+        <parent>rl_steering_link</parent>
+        <child>rl_wheel_link</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>1.5</effort>
+            <velocity>20</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='rl_wheel_link'>
+        <pose>-0.076999999999999999 0.052000000000000011 -0.028999999999999915 -5.127487550377205e-32 -5.4903414317210337e-13 -3.141592567179587</pose>
+        <inertial>
+          <pose>0 -0.0070000000000000001 0 0 0 0</pose>
+          <mass>0.050000000000000003</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.8e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1.0000000000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='rl_wheel_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/wheel/robot_wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1.2</mu>
+                <mu2>1.2</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rl_wheel_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/wheel/wheel_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='rr_steering_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>base_footprint</parent>
+        <child>rr_steering_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.1000000000000001</lower>
+            <upper>2.1000000000000001</upper>
+            <effort>5</effort>
+            <velocity>6.2800000000000002</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='rr_steering_link'>
+        <pose>-0.077000000000000013 -0.031000000000000003 -0.0039999999999995595 1.1928527039963109e-32 7.5419622231892134e-33 -7.6299539436028312e-20</pose>
+        <inertial>
+          <pose>0 0 -0.02 0 0 0</pose>
+          <mass>0.14999999999999999</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.0000000000000001e-05</iyy>
+            <iyz>0</iyz>
+            <izz>3.9999999999999998e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='rr_steering_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/suspension/sus_link.stl</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name='rr_steering_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/suspension/rr_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='rr_wheel_joint' type='revolute'>
+        <pose>0 0 0 0 0 0</pose>
+        <parent>rr_steering_link</parent>
+        <child>rr_wheel_link</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>1.5</effort>
+            <velocity>20</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='rr_wheel_link'>
+        <pose>-0.076999999999999999 -0.051999999999999998 -0.028999999999999915 -1.2495219987730882e-32 5.4914549067648721e-13 -7.6299539436028312e-20</pose>
+        <inertial>
+          <pose>0 -0.0070000000000000001 0 0 0 0</pose>
+          <mass>0.050000000000000003</mass>
+          <inertia>
+            <ixx>1.0000000000000001e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.8e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1.0000000000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='rr_wheel_link_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/STL/wheel/robot_wheel.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>1.2</mu>
+                <mu2>1.2</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='rr_wheel_link_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>file://<urdf-string>/model://fws_description/meshes/DAE/wheel/wheel_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <plugin name='gz_ros2_control::GazeboSimROS2ControlPlugin' filename='gz_ros2_control-system'>
+        <parameters>/home/cirl/fws_robot_harmonic/src/fws_description/config/fws_robot_sim.yaml</parameters>
+      </plugin>
+      <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+        <render_engine>ogre2</render_engine>
+      </plugin>
+      <frame name='lidar_base_link_joint' attached_to='base_link'>
+        <pose>-0.021999999999999999 0 0.035000000000000003 0 0 0</pose>
+      </frame>
+      <frame name='lidar_base_link' attached_to='lidar_base_link_joint'>
+        <pose>0 0 0 0 0 0</pose>
+      </frame>
+      <frame name='lidar_head_joint' attached_to='base_link'>
+        <pose>0 0 0.035000000000000003 0 0 0</pose>
+      </frame>
+      <frame name='lidar_head_link' attached_to='lidar_head_joint'>
+        <pose>0 0 0 0 0 0</pose>
+      </frame>
+      <frame name='base_link_joint' attached_to='base_footprint'>
+        <pose>0 0 0 0 0 0</pose>
+      </frame>
+      <frame name='base_link' attached_to='base_link_joint'>
+        <pose>0 0 0 0 0 0</pose>
+      </frame>
+      <pose>-3.4877587612524862e-11 1.1841556846418667e-16 2.0549991482138976 2.1814794125917187e-16 -6.5039810901976213e-10 -6.9145389941987666e-17</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

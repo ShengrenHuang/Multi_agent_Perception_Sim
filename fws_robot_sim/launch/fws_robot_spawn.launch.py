@@ -40,7 +40,7 @@ def generate_launch_description():
         )
 
     arguments = LaunchDescription([
-                DeclareLaunchArgument('world', default_value='fws_robot_world',
+                DeclareLaunchArgument('world', default_value='fws_robot_world8',
                           description='Gz sim World'),
            ]
     )

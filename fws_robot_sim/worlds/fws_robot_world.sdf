@@ -218,6 +218,30 @@
       <pose>0 0 2 0 0 0</pose>
     </include>
 
+
+    <include>
+      <uri>/road_1</uri>
+      <pose>0 0 10 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/house_1</uri>
+      <pose>5 0 10 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/rock_1</uri>
+      <pose>5 10 10 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/GoogleResearch/models/Breyer_Horse_Of_The_Year_2015</uri>
+      <pose>5 10 10 0 0 0</pose>
+    </include>
+
+
+
+
     <model name="x3">
       <include merge="true">
         <uri>/x3</uri>
