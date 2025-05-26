@@ -1,1 +1,1 @@
-cv_bridge:opencv2:rclcpp:std_msgs
+cv_bridge:nav_msgs:opencv2:rclcpp:std_msgs

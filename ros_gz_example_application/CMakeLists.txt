@@ -10,6 +10,10 @@ find_package(OpenCV REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED) 
+# # Gazebo
+# find_package(gz-msgs9 REQUIRED)
+# find_package(gz-transport12 REQUIRED)
 
 
 add_executable(talker src/publisher_lambda_function.cpp)
@@ -27,6 +31,13 @@ ament_target_dependencies(image_processor_node
   sensor_msgs
 )
 
+add_executable(UAV_pid_control_node src/UAV_navigation.cpp)
+ament_target_dependencies(UAV_pid_control_node
+  rclcpp
+  nav_msgs
+  # gz-msgs9::gz-msgs9
+  # gz-transport12::gz-transport12
+)
 
 include_directories(
   ${OpenCV_INCLUDE_DIRS}
@@ -41,6 +52,7 @@ install(TARGETS
     talker
     listener
     image_processor_node
+    UAV_pid_control_node
     DESTINATION lib/${PROJECT_NAME})
 
 

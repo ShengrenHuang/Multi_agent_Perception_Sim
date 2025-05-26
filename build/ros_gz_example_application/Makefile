@@ -236,6 +236,43 @@ image_processor_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processor_node.dir/build.make CMakeFiles/image_processor_node.dir/build
 .PHONY : image_processor_node/fast
 
+#=============================================================================
+# Target rules for targets named UAV_pid_control_node
+
+# Build rule for target.
+UAV_pid_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UAV_pid_control_node
+.PHONY : UAV_pid_control_node
+
+# fast build rule for target.
+UAV_pid_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/build
+.PHONY : UAV_pid_control_node/fast
+
+src/UAV_navigation.o: src/UAV_navigation.cpp.o
+.PHONY : src/UAV_navigation.o
+
+# target to build an object file
+src/UAV_navigation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o
+.PHONY : src/UAV_navigation.cpp.o
+
+src/UAV_navigation.i: src/UAV_navigation.cpp.i
+.PHONY : src/UAV_navigation.i
+
+# target to preprocess a source file
+src/UAV_navigation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.i
+.PHONY : src/UAV_navigation.cpp.i
+
+src/UAV_navigation.s: src/UAV_navigation.cpp.s
+.PHONY : src/UAV_navigation.s
+
+# target to generate assembly for a file
+src/UAV_navigation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.s
+.PHONY : src/UAV_navigation.cpp.s
+
 src/cascade_classifier.o: src/cascade_classifier.cpp.o
 .PHONY : src/cascade_classifier.o
 
@@ -323,9 +360,13 @@ help:
 	@echo "... test"
 	@echo "... ros_gz_example_application_uninstall"
 	@echo "... uninstall"
+	@echo "... UAV_pid_control_node"
 	@echo "... image_processor_node"
 	@echo "... listener"
 	@echo "... talker"
+	@echo "... src/UAV_navigation.o"
+	@echo "... src/UAV_navigation.i"
+	@echo "... src/UAV_navigation.s"
 	@echo "... src/cascade_classifier.o"
 	@echo "... src/cascade_classifier.i"
 	@echo "... src/cascade_classifier.s"

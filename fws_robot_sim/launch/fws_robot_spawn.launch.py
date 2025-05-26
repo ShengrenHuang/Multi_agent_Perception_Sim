@@ -143,6 +143,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    UAV_pid = Node(
+        package='ros_gz_example_application',
+        executable='UAV_pid_control_node',
+        name='UAV_pid_control_node',
+        output='screen'
+    )
+
     return LaunchDescription([
         RegisterEventHandler(
             event_handler=OnProcessExit(
@@ -165,4 +172,5 @@ def generate_launch_description():
         bridge,
         rviz,
         detection,
+        UAV_pid
     ])

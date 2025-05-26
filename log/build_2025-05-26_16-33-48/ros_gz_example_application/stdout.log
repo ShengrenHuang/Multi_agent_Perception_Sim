@@ -1,0 +1,6 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o[0m
+[ 37%] Built target listener
+[ 50%] [32mBuilding CXX object CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o[0m
+[ 75%] Built target talker
+[ 87%] [32m[1mLinking CXX executable image_processor_node[0m
+[ 87%] Built target image_processor_node
