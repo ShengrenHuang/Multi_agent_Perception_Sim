@@ -2,15 +2,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "std_msgs/msg/string.hpp"
-// // Gazebo Transport includes
-// #include <gz/msgs/twist.pb.h>
-// #include <gz/msgs/vector3d.pb.h>
-// #include <gz/transport/Node.hh>
+#include "geometry_msgs/msg/twist.hpp"
+
 
 // Reference signal (Position)
-float ref_x = 3;
-float ref_y = 4;
-
+float ref_x = 30;
+float ref_y = 30;
+float max_amp = 1;
 
 
 class UAV_Nav_Publisher : public rclcpp::Node{
@@ -21,45 +19,48 @@ class UAV_Nav_Publisher : public rclcpp::Node{
                 10,
                 std::bind(&UAV_Nav_Publisher::PosCallback, this, std::placeholders::_1)
             );
-            // publisher_ = gz_node_.Advertise<gz::msgs::Twist>("/model/x3/cmd_vel");
+            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/x3/cmd_vel", 10);
             RCLCPP_INFO(this->get_logger(), "UAV_PID_Control node started");
         }
 
     private:
-        // void UAV_PID_Control(float x, float y){
-        //     float error_x =  ref_x - x;
-        //     float error_y =  ref_y - y;
+        float sat_func(float amp){
+            float result = 0;
+            if(abs(amp)>=max_amp){
+                result = (abs(amp)/amp)*max_amp;
+            }else{
+                result = amp;
+            }
+            return result;
+        }
+        void UAV_PID_Control(float x, float y){
+            float error_x =  ref_x - x;
+            float error_y =  ref_y - y;
 
-        //     float k_p = 1.0;
-        //     float vx = k_p*error_x;
-        //     float vy = k_p*error_y;
+            RCLCPP_INFO(this->get_logger(), "Error -> x: %0.3f, y: %0.3f", error_x, error_y);
+            float k_p = 1;
+            float vx = k_p*error_x;
+            float vy = k_p*error_y;
+            vx = sat_func(vx);
+            vy = sat_func(vy);
 
-        //     gz::msgs::Twist cmd_msg;
-        //     gz::msgs::Vector3d *linear = cmd_msg.mutable_linear();
-        //     linear->set_x(vx);
-        //     linear->set_y(vy);
-        //     linear->set_z(0.0);
-
-        //     cmd_msg.mutable_angular()->set_x(0.0);
-        //     cmd_msg.mutable_angular()->set_y(0.0);
-        //     cmd_msg.mutable_angular()->set_z(0.0);
-
-        //     // publisher_.publish(cmd_msg);
-        // }
-
+            geometry_msgs::msg::Twist msg;
+            msg.linear.x = vx;
+            msg.linear.y = vy;
+            msg.linear.z = 0.0;
+            msg.angular.z = 0.0;
+            publisher_->publish(msg);
+        }
 
         void PosCallback(const nav_msgs::msg::Odometry::SharedPtr msg){
             RCLCPP_INFO(this->get_logger(), "Received Pos callback triggered.");
             auto pos = msg->pose.pose.position;
-            RCLCPP_INFO(this->get_logger(), "Position -> x: %0.3f, y: %0.3f", pos.x, pos.y);
-            // UAV_PID_Control(pos.x, pos.y);
+            // RCLCPP_INFO(this->get_logger(), "Position -> x: %0.3f, y: %0.3f", pos.x, pos.y);
+            UAV_PID_Control(pos.x, pos.y);
         }
 
         rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber_;
-
-        // // Gazebo Transport
-        // gz::transport::Node gz_node_;
-        // gz::transport::Node::Publisher publisher_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
 
 };
 

@@ -1,0 +1,11 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:[m[K In constructor ‘[01m[KUAV_Nav_Publisher::[01;32m[KUAV_Nav_Publisher[m[K()[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:22:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kgz_node_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_node_t[m[K’?
+   22 |             publisher_ = [01;31m[Kgz_node_[m[K.Advertise<geometry_msgs::msg::Twist>("/model/x3/cmd_vel");
+      |                          [01;31m[K^~~~~~~~[m[K
+      |                          [32m[Krmw_node_t[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:22:70:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   22 |             publisher_ = gz_node_.Advertise<geometry_msgs::msg::Twist[01;31m[K>[m[K("/model/x3/cmd_vel");
+      |                                                                      [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/UAV_pid_control_node.dir/build.make:76: CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/UAV_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

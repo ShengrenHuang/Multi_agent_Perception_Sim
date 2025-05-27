@@ -1,0 +1,4 @@
+[ 25%] Built target talker
+[ 62%] Built target listener
+[ 62%] [32mBuilding CXX object CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o[0m
+[ 87%] Built target image_processor_node
