@@ -48,4 +48,7 @@ ros2 launch fws_robot_sim fws_robot_spawn.launch.py
 ## Ground robot control
 ros2 topic pub -r 100.1 forward_velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [1000.0, 1000.0, 1000.0, 1000.0]}"
 
+## Activate python virtual env
+source ~/ros2_rl_env/bin/activate
+
 ```
