@@ -40,7 +40,7 @@ def generate_launch_description():
         )
 
     arguments = LaunchDescription([
-                DeclareLaunchArgument('world', default_value='fws_robot_world8',
+                DeclareLaunchArgument('world', default_value='fws_robot_world9',
                           description='Gz sim World'),
            ]
     )
@@ -79,9 +79,9 @@ def generate_launch_description():
         executable='create',
         output='screen',
         arguments=['-string', robot_desc,
-                   '-x', '0.0',
-                   '-y', '0.0',
-                   '-z', '5.07',
+                   '-x', '10.0',
+                   '-y', '10.0',
+                   '-z', '4.07',
                    '-R', '0.0',
                    '-P', '0.0',
                    '-Y', '0.0',
@@ -106,6 +106,8 @@ def generate_launch_description():
              'forward_position_controller'],
         output='screen'
     )
+
+
 
     # Bridge
     # bridge = Node(
@@ -150,20 +152,27 @@ def generate_launch_description():
         output='screen'
     )
 
+    uav_rl_node = Node(
+        package='ros_rl',
+        executable='uav_rl_env',
+        name='uav_rl_node',
+        output='screen'
+    )
+
     return LaunchDescription([
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=gz_spawn_entity,
-                on_exit=[load_joint_state_controller],
-            )
-        ),
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-               target_action=load_joint_state_controller,
-               on_exit=[load_forward_velocity_controller,
-                        load_forward_position_controller],
-            )
-        ),
+        # RegisterEventHandler(
+        #     event_handler=OnProcessExit(
+        #         target_action=gz_spawn_entity,
+        #         on_exit=[load_joint_state_controller],
+        #     )
+        # ),
+        # RegisterEventHandler(
+        #     event_handler=OnProcessExit(
+        #        target_action=load_joint_state_controller,
+        #        on_exit=[load_forward_velocity_controller,
+        #                 load_forward_position_controller],
+        #     )
+        # ),
         gazebo_resource_path,
         arguments,
         gazebo,
@@ -172,5 +181,6 @@ def generate_launch_description():
         bridge,
         rviz,
         detection,
-        UAV_pid
+        # UAV_pid,
+        # uav_rl_node,
     ])

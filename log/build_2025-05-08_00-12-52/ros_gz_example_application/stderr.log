@@ -1,7 +1,0 @@
-[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:[m[K In member function ‘[01m[Kvoid ImagePublisher::[01;32m[KRobotDetection[m[K(const cv_bridge::CvImagePtr&, const std_msgs::msg::Header&)[m[K’:
-[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade_classifier.cpp:41:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[Kif[m[K’
-   41 |             [01;31m[Kif[m[K(!Robot_cascade.load(RobotClassifier)){
-      |             [01;31m[K^~[m[K
-gmake[2]: *** [CMakeFiles/image_processor_node.dir/build.make:76: CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/image_processor_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

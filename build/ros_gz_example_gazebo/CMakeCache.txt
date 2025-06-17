@@ -595,9 +595,6 @@ gz-sensors8-wide_angle_camera_DIR:PATH=/opt/ros/jazzy/opt/gz_sensors_vendor/lib/
 //The directory containing a CMake configuration file for gz-sensors8.
 gz-sensors8_DIR:PATH=/opt/ros/jazzy/opt/gz_sensors_vendor/lib/cmake/gz-sensors8
 
-//The directory containing a CMake configuration file for gz-sim7.
-gz-sim7_DIR:PATH=gz-sim7_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for gz-sim8.
 gz-sim8_DIR:PATH=/opt/ros/jazzy/opt/gz_sim_vendor/lib/cmake/gz-sim8
 

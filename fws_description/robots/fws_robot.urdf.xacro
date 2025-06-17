@@ -18,6 +18,9 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
 
+
+
+
   <!-- =============== Link & Joint =============== -->
   <!-- Base -->
   <link name="base_footprint"/> <!--link name="base_footprint"/ -->
@@ -104,5 +107,22 @@
 
   <xacro:fws_robot_gazebo/>
   <xacro:fws_robot_ros2_control/>
+
+
+  <!-- <gazebo>
+  <plugin name="gz::sim::systems::PosePublisher" filename="gz-sim-pose-publisher-system">
+      <publish_link_pose>true</publish_link_pose>
+      <publish_sensor_pose>true</publish_sensor_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <use_pose_vector_msg>true</use_pose_vector_msg>
+    </plugin>
+  </gazebo> -->
     
+
+
+
+
+
+
+
 </robot>

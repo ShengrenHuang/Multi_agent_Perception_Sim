@@ -7,6 +7,7 @@
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world6.sdf
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world7.sdf
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world8.sdf
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world9.sdf
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/asphalt.png
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/house.png
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/muds.jpg

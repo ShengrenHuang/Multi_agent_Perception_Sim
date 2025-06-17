@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.5)
 project(ros_gz_example_application)
 
 find_package(ament_cmake REQUIRED)
-
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
@@ -47,6 +46,9 @@ include_directories(
 target_link_libraries(image_processor_node
   ${OpenCV_LIBS}
 )
+
+
+
 
 install(TARGETS 
     talker

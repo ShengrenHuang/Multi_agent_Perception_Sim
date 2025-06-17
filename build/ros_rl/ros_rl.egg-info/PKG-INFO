@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ros-rl
+Version: 0.0.0
+Summary: UAV RL environment using Gymnasium and ROS 2
+Maintainer: cirl
+Maintainer-email: bulin11636@gmail.com
+License: MIT

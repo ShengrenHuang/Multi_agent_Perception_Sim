@@ -1,0 +1,2 @@
+[console_scripts]
+uav_rl_env = ros_rl.UAV_RL_pipeline:main
