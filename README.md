@@ -51,6 +51,10 @@ ros2 topic pub -r 100.1 forward_velocity_controller/commands std_msgs/msg/Float6
 ### Wheel position
 ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.5, 0.5, 0.5, 0.5]}"
 
+## Activate python virtual env
+source ~/ros2_rl_env/bin/activate
+
+```
 ## Current Features and File Locations
 
 ### UAV Navigator
@@ -71,7 +75,4 @@ ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64M
 
 
 
-## Activate python virtual env
-source ~/ros2_rl_env/bin/activate
 
-```
