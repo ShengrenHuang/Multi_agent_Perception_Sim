@@ -51,6 +51,25 @@ ros2 topic pub -r 100.1 forward_velocity_controller/commands std_msgs/msg/Float6
 ### Wheel position
 ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.5, 0.5, 0.5, 0.5]}"
 
+## Current Features and File Locations
+
+### UAV Navigator
+- Successfully navigates the UAV to a specific waypoint.  
+- **Source:** [`Multi_agent_Perception_Sim/ros_gz_example_application/src/UAV_navigation.cpp`](Multi_agent_Perception_Sim/ros_gz_example_application/src/UAV_navigation.cpp)
+
+### Ground Robot Navigator
+- Navigates the ground robot to a specific waypoint (still under refinement).  
+- **Source:** [`Multi_agent_Perception_Sim/ros_gz_example_application/src/Robot_navigation.cpp`](Multi_agent_Perception_Sim/ros_gz_example_application/src/Robot_navigation.cpp)
+
+### Onboard Object Detection
+- A downward-facing camera on the UAV, combined with an object detection algorithm, can detect the presence of the ground robot.  
+- **Source:** [`Multi_agent_Perception_Sim/ros_gz_example_application/src/cascade_classifier.cpp`](Multi_agent_Perception_Sim/ros_gz_example_application/src/cascade_classifier.cpp)
+
+### OpenAI Gym Integration
+- The platform now supports reinforcement learning training (speed optimization in progress).  
+- **Source:** [`Multi_agent_Perception_Sim/ros_rl/ros_rl/UAV_RL_pipeline.py`](Multi_agent_Perception_Sim/ros_rl/ros_rl/UAV_RL_pipeline.py)
+
+
 
 ## Activate python virtual env
 source ~/ros2_rl_env/bin/activate
