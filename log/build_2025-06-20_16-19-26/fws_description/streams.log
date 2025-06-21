@@ -1,0 +1,99 @@
+[0.014s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake /home/cirl/ros_gz_project_template-main/fws_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cirl/ros_gz_project_template-main/install/fws_description
+[0.235s] -- The C compiler identification is GNU 13.3.0
+[0.235s] -- The CXX compiler identification is GNU 13.3.0
+[0.235s] -- Detecting C compiler ABI info
+[0.235s] -- Detecting C compiler ABI info - done
+[0.235s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.235s] -- Detecting C compile features
+[0.235s] -- Detecting C compile features - done
+[0.235s] -- Detecting CXX compiler ABI info
+[0.236s] -- Detecting CXX compiler ABI info - done
+[0.236s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.236s] -- Detecting CXX compile features
+[0.236s] -- Detecting CXX compile features - done
+[0.236s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.306s] -- Found Python3: /home/cirl/ros2_rl_env/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.347s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.376s] -- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+[0.378s] -- Found robot_state_publisher: 3.3.3 (/opt/ros/jazzy/share/robot_state_publisher/cmake)
+[0.406s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.416s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.427s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.439s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.499s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.502s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.560s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.577s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.597s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.795s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.877s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.880s] -- Added test 'lint_cmake' to check CMake code style
+[0.883s] -- Added test 'xmllint' to check XML markup files
+[0.884s] -- Configuring done (0.9s)
+[0.887s] -- Generating done (0.0s)
+[0.888s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/fws_description
+[0.895s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake /home/cirl/ros_gz_project_template-main/fws_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cirl/ros_gz_project_template-main/install/fws_description
+[0.896s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_description -- -j32 -l32
+[0.922s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_description -- -j32 -l32
+[0.923s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_description
+[0.927s] -- Install configuration: ""
+[0.927s] -- Execute custom install script
+[0.927s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/fws_robot.urdf.xacro
+[0.932s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/base/base.gazebo.xacro
+[0.939s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/base/base.urdf.xacro
+[0.944s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/lidar_base/lidar_base.gazebo.xacro
+[0.951s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/lidar_base/lidar_base.urdf.xacro
+[0.956s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/lidar_head/lidar_head.gazebo.xacro
+[0.960s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/lidar_head/lidar_head.urdf.xacro
+[0.967s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/suspension/suspension.gazebo.xacro
+[0.971s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/suspension/suspension.urdf.xacro
+[0.976s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/wheel/wheel.gazebo.xacro
+[0.981s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/robots/parts/wheel/wheel.urdf.xacro
+[0.987s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/gazebo/fws_robot.gazebo.xacro
+[0.995s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/ros2_control/fws_robot.ros2_control.xacro
+[1.001s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/config/fws_robot_config.rviz
+[1.006s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/config/fws_robot_sim.yaml
+[1.013s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/base/base_link.dae
+[1.019s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/base/base_linkOLD.dae
+[1.025s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/lidar_base/YDlidar_base.dae
+[1.031s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/lidar_head/YDlidar_head.dae
+[1.036s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/camera/camera.dae
+[1.041s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/front_lrf/front_lrf.dae
+[1.047s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/front_lrf/lrf_texture.png
+[1.054s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/gim30/gim30.dae
+[1.062s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/gim30/gim30_lrf_texture.png
+[1.070s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/gps/gps.dae
+[1.077s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/gps/gps_texture.png
+[1.085s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/rear_lrf/rear_lrf.dae
+[1.090s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/sensors/rear_lrf/urg_texture.png
+[1.095s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/suspension/fl_link.dae
+[1.104s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/suspension/fr_link.dae
+[1.113s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/suspension/rl_link.dae
+[1.119s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/suspension/rr_link.dae
+[1.124s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/DAE/wheel/wheel_link.dae
+[1.129s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/base/base_link.stl
+[1.136s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/base/base_link_old.stl
+[1.143s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/lidar_base/YDlidar_base.stl
+[1.150s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/lidar_head/YDlidar_head.stl
+[1.156s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/sensors/front_lrf/front_lrf.stl
+[1.165s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/sensors/gim30/gim30.stl
+[1.171s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/sensors/gps/gps.stl
+[1.179s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/sensors/rear_lrf/rear_lrf.stl
+[1.185s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/suspension/sus_link.stl
+[1.190s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/meshes/STL/wheel/robot_wheel.stl
+[1.198s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/ament_index/resource_index/package_run_dependencies/fws_description
+[1.207s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/ament_index/resource_index/parent_prefix_path/fws_description
+[1.215s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/environment/ament_prefix_path.sh
+[1.220s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/environment/ament_prefix_path.dsv
+[1.227s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/environment/path.sh
+[1.232s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/environment/path.dsv
+[1.240s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/local_setup.bash
+[1.248s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/local_setup.sh
+[1.257s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/local_setup.zsh
+[1.264s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/local_setup.dsv
+[1.271s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/package.dsv
+[1.278s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/ament_index/resource_index/packages/fws_description
+[1.284s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/cmake/fws_descriptionConfig.cmake
+[1.293s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/cmake/fws_descriptionConfig-version.cmake
+[1.299s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_description/share/fws_description/package.xml
+[1.309s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_description

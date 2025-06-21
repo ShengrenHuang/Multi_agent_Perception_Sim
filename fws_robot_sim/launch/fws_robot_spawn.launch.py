@@ -152,27 +152,34 @@ def generate_launch_description():
         output='screen'
     )
 
-    uav_rl_node = Node(
-        package='ros_rl',
-        executable='uav_rl_env',
-        name='uav_rl_node',
+    gps_node = Node(
+        package='gps_to_gazebo',
+        executable='gps_to_gazebo_node',
+        name='gps_node',
+        output='screen'
+    )
+
+    robot_pid_node = Node(
+        package='ros_gz_example_application',
+        executable='Robot_pid_control_node',
+        name='Robot_pid_control_node',
         output='screen'
     )
 
     return LaunchDescription([
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #         target_action=gz_spawn_entity,
-        #         on_exit=[load_joint_state_controller],
-        #     )
-        # ),
-        # RegisterEventHandler(
-        #     event_handler=OnProcessExit(
-        #        target_action=load_joint_state_controller,
-        #        on_exit=[load_forward_velocity_controller,
-        #                 load_forward_position_controller],
-        #     )
-        # ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+                target_action=gz_spawn_entity,
+                on_exit=[load_joint_state_controller],
+            )
+        ),
+        RegisterEventHandler(
+            event_handler=OnProcessExit(
+               target_action=load_joint_state_controller,
+               on_exit=[load_forward_velocity_controller,
+                        load_forward_position_controller],
+            )
+        ),
         gazebo_resource_path,
         arguments,
         gazebo,
@@ -181,6 +188,8 @@ def generate_launch_description():
         bridge,
         rviz,
         detection,
+        gps_node,
+        robot_pid_node
         # UAV_pid,
         # uav_rl_node,
     ])

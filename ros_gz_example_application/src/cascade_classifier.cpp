@@ -40,9 +40,9 @@ class ImagePublisher : public rclcpp::Node{
             std::vector<Rect> ground_robot;
             string RobotClassifier = "/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/cascade.xml";
             if(!Robot_cascade.load(RobotClassifier)){
-                RCLCPP_INFO(this->get_logger(), "Could not load the classifier");
+                // RCLCPP_INFO(this->get_logger(), "Could not load the classifier");
             }else{
-                RCLCPP_INFO(this->get_logger(), "Load the classifier");
+                // RCLCPP_INFO(this->get_logger(), "Load the classifier");
             }
             Robot_cascade.detectMultiScale(frame_gray, ground_robot);
         
@@ -55,7 +55,7 @@ class ImagePublisher : public rclcpp::Node{
         }
 
         void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &msg){
-            RCLCPP_INFO(this->get_logger(), "Received image callback triggered.");
+            // RCLCPP_INFO(this->get_logger(), "Received image callback triggered.");
             cv_bridge::CvImagePtr cv_ptr;
             try{
                 cv_ptr = cv_bridge::toCvCopy(msg, "bgr8");

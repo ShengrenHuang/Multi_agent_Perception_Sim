@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+gps_to_gazebo/__init__.py
+gps_to_gazebo/gps_to_gazebo_node.py
+gps_to_gazebo.egg-info/PKG-INFO
+gps_to_gazebo.egg-info/SOURCES.txt
+gps_to_gazebo.egg-info/dependency_links.txt
+gps_to_gazebo.egg-info/entry_points.txt
+gps_to_gazebo.egg-info/requires.txt
+gps_to_gazebo.egg-info/top_level.txt
+gps_to_gazebo.egg-info/zip-safe
+resource/gps_to_gazebo

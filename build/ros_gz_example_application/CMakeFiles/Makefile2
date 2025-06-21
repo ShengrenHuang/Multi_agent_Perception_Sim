@@ -67,6 +67,7 @@ all: CMakeFiles/talker.dir/all
 all: CMakeFiles/listener.dir/all
 all: CMakeFiles/image_processor_node.dir/all
 all: CMakeFiles/UAV_pid_control_node.dir/all
+all: CMakeFiles/Robot_pid_control_node.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -80,6 +81,7 @@ clean: CMakeFiles/talker.dir/clean
 clean: CMakeFiles/listener.dir/clean
 clean: CMakeFiles/image_processor_node.dir/clean
 clean: CMakeFiles/UAV_pid_control_node.dir/clean
+clean: CMakeFiles/Robot_pid_control_node.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -141,7 +143,7 @@ CMakeFiles/ros_gz_example_application_uninstall.dir/clean:
 CMakeFiles/talker.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=7,8 "Built target talker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=9,10 "Built target talker"
 .PHONY : CMakeFiles/talker.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,7 +169,7 @@ CMakeFiles/talker.dir/clean:
 CMakeFiles/listener.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=5,6 "Built target listener"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=7,8 "Built target listener"
 .PHONY : CMakeFiles/listener.dir/all
 
 # Build rule for subdir invocation for target.
@@ -193,7 +195,7 @@ CMakeFiles/listener.dir/clean:
 CMakeFiles/image_processor_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processor_node.dir/build.make CMakeFiles/image_processor_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processor_node.dir/build.make CMakeFiles/image_processor_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=3,4 "Built target image_processor_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=5,6 "Built target image_processor_node"
 .PHONY : CMakeFiles/image_processor_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -219,7 +221,7 @@ CMakeFiles/image_processor_node.dir/clean:
 CMakeFiles/UAV_pid_control_node.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=1,2 "Built target UAV_pid_control_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=3,4 "Built target UAV_pid_control_node"
 .PHONY : CMakeFiles/UAV_pid_control_node.dir/all
 
 # Build rule for subdir invocation for target.
@@ -237,6 +239,32 @@ UAV_pid_control_node: CMakeFiles/UAV_pid_control_node.dir/rule
 CMakeFiles/UAV_pid_control_node.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/clean
 .PHONY : CMakeFiles/UAV_pid_control_node.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Robot_pid_control_node.dir
+
+# All Build rule for target.
+CMakeFiles/Robot_pid_control_node.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles --progress-num=1,2 "Built target Robot_pid_control_node"
+.PHONY : CMakeFiles/Robot_pid_control_node.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Robot_pid_control_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Robot_pid_control_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/CMakeFiles 0
+.PHONY : CMakeFiles/Robot_pid_control_node.dir/rule
+
+# Convenience name for target.
+Robot_pid_control_node: CMakeFiles/Robot_pid_control_node.dir/rule
+.PHONY : Robot_pid_control_node
+
+# clean rule for target.
+CMakeFiles/Robot_pid_control_node.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/clean
+.PHONY : CMakeFiles/Robot_pid_control_node.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

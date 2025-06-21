@@ -1,0 +1,12 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In member function ‘[01m[Kvoid RobotNavPublisher::[01;32m[KodomCallback[m[K(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:64:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kalpha[m[K’ was not declared in this scope; did you mean ‘[01m[Kisalpha[m[K’?
+   64 |         steering_angle = [01;31m[Kalpha[m[K * steering_angle + (1 - alpha) * prev_steering_angle_;
+      |                          [01;31m[K^~~~~[m[K
+      |                          [32m[Kisalpha[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:64:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kprev_steering_angle_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksteering_angle[m[K’?
+   64 |         steering_angle = alpha * steering_angle + (1 - alpha) * [01;31m[Kprev_steering_angle_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                 [32m[Ksteering_angle[m[K
+gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:249: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -45,46 +45,11 @@
       </sensor>
     </gazebo>
 
-    <!-- GPS Link and Joint -->
-    <link name="gps_link">
-      <visual>
-        <geometry>
-          <sphere radius="0.01"/>
-        </geometry>
-        <material name="white"/>
-      </visual>
-    </link>
-
-    <joint name="gps_joint" type="fixed">
-      <parent link="base_link"/>
-      <child link="gps_link"/>
-      <origin xyz="0 0 0.1" rpy="0 0 0"/>
-    </joint>
-
-    <!-- GPS Sensor Plugin -->
-    <gazebo reference="gps_link">
-      <sensor name="gps_sensor" type="navsat">
-        <pose>0 0 0 0 0 0</pose>
-        <update_rate>5.0</update_rate>
-        <navsat>
-          <horizontal>
-            <noise type="gaussian">
-              <mean>0</mean>
-              <stddev>1e-6</stddev>
-            </noise>
-          </horizontal>
-          <vertical>
-            <noise type="gaussian">
-              <mean>0</mean>
-              <stddev>1e-6</stddev>
-            </noise>
-          </vertical>
-        </navsat>
-      </sensor>
+    <gazebo>
+      <plugin filename="gz-sim-navsat-system"
+          name="gz::sim::systems::NavSat">
+      </plugin>
     </gazebo>
-
-
-
   </xacro:macro>
     
 </robot>

@@ -50,10 +50,6 @@
                 <visualize>true</visualize>
             </sensor>
             <gravity>false</gravity>
-            <sensor name="navsat_sensor" type="navsat">
-                <always_on>1</always_on>
-                <update_rate>30</update_rate>
-            </sensor>
 
         </link>
 

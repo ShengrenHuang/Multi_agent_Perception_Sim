@@ -29,6 +29,47 @@
 	</link>
 
 
+    <!-- GPS Link -->
+    <link name="gps_link">
+      <inertial>
+        <origin xyz="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+      </inertial>
+    </link>
+
+    <!-- Joint to attach GPS to base -->
+    <joint name="gps_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="gps_link"/>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Gazebo plugin for GPS -->
+    <gazebo reference="gps_link">
+      <sensor name="gps_sensor" type="gps">
+        <always_on>true</always_on>
+        <update_rate>5</update_rate>
+        <gps>
+          <position_sensing>
+            <horizontal>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0</stddev>
+              </noise>
+            </horizontal>
+            <vertical>
+              <noise type="gaussian">
+                <mean>0.0</mean>
+                <stddev>0.0</stddev>
+              </noise>
+            </vertical>
+          </position_sensing>
+        </gps>
+        <visualize>false</visualize>
+      </sensor>
+    </gazebo>
+
 
   </xacro:macro>
   

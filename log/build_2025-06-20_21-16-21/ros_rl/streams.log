@@ -1,0 +1,17 @@
+[0.545s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_rl': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/cirl/ros_gz_project_template-main/build/ros_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cirl/ros_gz_project_template-main/install/ros_rl/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cirl/ros_gz_project_template-main/build/ros_rl/build --no-deps symlink_data
+[0.710s] running develop
+[0.808s] running egg_info
+[0.817s] writing ros_rl.egg-info/PKG-INFO
+[0.818s] writing dependency_links to ros_rl.egg-info/dependency_links.txt
+[0.818s] writing entry points to ros_rl.egg-info/entry_points.txt
+[0.818s] writing requirements to ros_rl.egg-info/requires.txt
+[0.818s] writing top-level names to ros_rl.egg-info/top_level.txt
+[0.837s] reading manifest file 'ros_rl.egg-info/SOURCES.txt'
+[0.837s] writing manifest file 'ros_rl.egg-info/SOURCES.txt'
+[0.848s] running build_ext
+[0.848s] Creating /home/cirl/ros_gz_project_template-main/install/ros_rl/lib/python3.12/site-packages/ros-rl.egg-link (link to .)
+[0.848s] Installing uav_rl_env script to /home/cirl/ros_gz_project_template-main/install/ros_rl/lib/ros_rl
+[0.848s] 
+[0.848s] Installed /home/cirl/ros_gz_project_template-main/build/ros_rl
+[0.849s] running symlink_data
+[0.865s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_rl' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/cirl/ros_gz_project_template-main/build/ros_rl/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cirl/ros_gz_project_template-main/install/ros_rl/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cirl/ros_gz_project_template-main/build/ros_rl/build --no-deps symlink_data

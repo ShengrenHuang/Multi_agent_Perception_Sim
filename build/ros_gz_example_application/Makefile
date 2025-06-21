@@ -249,6 +249,43 @@ UAV_pid_control_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAV_pid_control_node.dir/build.make CMakeFiles/UAV_pid_control_node.dir/build
 .PHONY : UAV_pid_control_node/fast
 
+#=============================================================================
+# Target rules for targets named Robot_pid_control_node
+
+# Build rule for target.
+Robot_pid_control_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Robot_pid_control_node
+.PHONY : Robot_pid_control_node
+
+# fast build rule for target.
+Robot_pid_control_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/build
+.PHONY : Robot_pid_control_node/fast
+
+src/Robot_navigation.o: src/Robot_navigation.cpp.o
+.PHONY : src/Robot_navigation.o
+
+# target to build an object file
+src/Robot_navigation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o
+.PHONY : src/Robot_navigation.cpp.o
+
+src/Robot_navigation.i: src/Robot_navigation.cpp.i
+.PHONY : src/Robot_navigation.i
+
+# target to preprocess a source file
+src/Robot_navigation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.i
+.PHONY : src/Robot_navigation.cpp.i
+
+src/Robot_navigation.s: src/Robot_navigation.cpp.s
+.PHONY : src/Robot_navigation.s
+
+# target to generate assembly for a file
+src/Robot_navigation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.s
+.PHONY : src/Robot_navigation.cpp.s
+
 src/UAV_navigation.o: src/UAV_navigation.cpp.o
 .PHONY : src/UAV_navigation.o
 
@@ -360,10 +397,14 @@ help:
 	@echo "... test"
 	@echo "... ros_gz_example_application_uninstall"
 	@echo "... uninstall"
+	@echo "... Robot_pid_control_node"
 	@echo "... UAV_pid_control_node"
 	@echo "... image_processor_node"
 	@echo "... listener"
 	@echo "... talker"
+	@echo "... src/Robot_navigation.o"
+	@echo "... src/Robot_navigation.i"
+	@echo "... src/Robot_navigation.s"
 	@echo "... src/UAV_navigation.o"
 	@echo "... src/UAV_navigation.i"
 	@echo "... src/UAV_navigation.s"

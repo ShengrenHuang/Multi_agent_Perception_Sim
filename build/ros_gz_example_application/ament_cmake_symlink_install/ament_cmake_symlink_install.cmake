@@ -310,7 +310,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "talker" "listener" "image_processor_node" "UAV_pid_control_node" "DESTINATION" "lib/ros_gz_example_application")
+# install("TARGETS" "talker" "listener" "image_processor_node" "UAV_pid_control_node" "Robot_pid_control_node" "DESTINATION" "lib/ros_gz_example_application")
 include("/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_application" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

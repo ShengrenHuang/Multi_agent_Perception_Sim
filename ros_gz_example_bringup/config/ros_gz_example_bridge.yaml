@@ -49,3 +49,18 @@
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
   direction: ROS_TO_GZ
+- ros_topic_name: "/fws_robot/gps/fix"
+  gz_topic_name: "/world/empty/model/fws_robot/link/base_footprint/sensor/gps_sensor/navsat"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS
+# - ros_topic_name: "/forward_velocity_controller/commands"
+#   gz_topic_name: "/model/fws_robot/joint_command"
+#   ros_type_name: "std_msgs/msg/Float64MultiArray"
+#   gz_type_name: "gz.msgs.Double_V"
+#   direction: ROS_TO_GZ
+# - ros_topic_name: "/forward_position_controller/commands"
+#   gz_topic_name: "/model/fws_robot/joint_position_cmd"
+#   ros_type_name: "std_msgs/msg/Float64MultiArray"
+#   gz_type_name: "gz.msgs.Double_V"
+#   direction: ROS_TO_GZ
