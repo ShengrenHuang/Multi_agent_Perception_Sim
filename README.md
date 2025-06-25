@@ -54,6 +54,8 @@ ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64M
 ## Activate python virtual env
 source ~/ros2_rl_env/bin/activate
 
+#!/home/cirl/ros2_rl_env/bin/python3
+
 ```
 ## Current Features and File Locations
 
