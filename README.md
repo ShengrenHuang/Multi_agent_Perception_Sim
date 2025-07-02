@@ -51,6 +51,12 @@ ros2 topic pub -r 100.1 forward_velocity_controller/commands std_msgs/msg/Float6
 ### Wheel position
 ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64MultiArray "{data: [0.5, 0.5, 0.5, 0.5]}"
 
+#### Pivot turn
+##### Counter-Clockwise
+ros2 topic pub -r 100.1 forward_velocity_controller/commands std_msgs/msg/Float64MultiArray "{data: [-1.0, 1.0, -1.0, 1.0]}"
+ros2 topic pub -r 10 /forward_position_controller/commands std_msgs/msg/Float64MultiArray "{data: [-0.5, 0.5, 0.5, -0.5]}"
+
+
 ## Activate python virtual env
 source ~/ros2_rl_env/bin/activate
 
