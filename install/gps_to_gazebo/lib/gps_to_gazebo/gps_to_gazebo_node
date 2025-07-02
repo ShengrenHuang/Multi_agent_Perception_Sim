@@ -1,4 +1,4 @@
-#!/home/cirl/ros2_rl_env/bin/python3
+#!/usr/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'gps-to-gazebo','console_scripts','gps_to_gazebo_node'
 import re
 import sys

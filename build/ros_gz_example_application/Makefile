@@ -262,6 +262,19 @@ Robot_pid_control_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Robot_pid_control_node.dir/build.make CMakeFiles/Robot_pid_control_node.dir/build
 .PHONY : Robot_pid_control_node/fast
 
+#=============================================================================
+# Target rules for targets named odometry_publisher_node
+
+# Build rule for target.
+odometry_publisher_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 odometry_publisher_node
+.PHONY : odometry_publisher_node
+
+# fast build rule for target.
+odometry_publisher_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/build
+.PHONY : odometry_publisher_node/fast
+
 src/Robot_navigation.o: src/Robot_navigation.cpp.o
 .PHONY : src/Robot_navigation.o
 
@@ -334,6 +347,54 @@ src/cascade_classifier.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_processor_node.dir/build.make CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.s
 .PHONY : src/cascade_classifier.cpp.s
 
+src/odometry.o: src/odometry.cpp.o
+.PHONY : src/odometry.o
+
+# target to build an object file
+src/odometry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o
+.PHONY : src/odometry.cpp.o
+
+src/odometry.i: src/odometry.cpp.i
+.PHONY : src/odometry.i
+
+# target to preprocess a source file
+src/odometry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.i
+.PHONY : src/odometry.cpp.i
+
+src/odometry.s: src/odometry.cpp.s
+.PHONY : src/odometry.s
+
+# target to generate assembly for a file
+src/odometry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.s
+.PHONY : src/odometry.cpp.s
+
+src/odometry_publish.o: src/odometry_publish.cpp.o
+.PHONY : src/odometry_publish.o
+
+# target to build an object file
+src/odometry_publish.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o
+.PHONY : src/odometry_publish.cpp.o
+
+src/odometry_publish.i: src/odometry_publish.cpp.i
+.PHONY : src/odometry_publish.i
+
+# target to preprocess a source file
+src/odometry_publish.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.i
+.PHONY : src/odometry_publish.cpp.i
+
+src/odometry_publish.s: src/odometry_publish.cpp.s
+.PHONY : src/odometry_publish.s
+
+# target to generate assembly for a file
+src/odometry_publish.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/odometry_publisher_node.dir/build.make CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.s
+.PHONY : src/odometry_publish.cpp.s
+
 src/publisher_lambda_function.o: src/publisher_lambda_function.cpp.o
 .PHONY : src/publisher_lambda_function.o
 
@@ -401,6 +462,7 @@ help:
 	@echo "... UAV_pid_control_node"
 	@echo "... image_processor_node"
 	@echo "... listener"
+	@echo "... odometry_publisher_node"
 	@echo "... talker"
 	@echo "... src/Robot_navigation.o"
 	@echo "... src/Robot_navigation.i"
@@ -411,6 +473,12 @@ help:
 	@echo "... src/cascade_classifier.o"
 	@echo "... src/cascade_classifier.i"
 	@echo "... src/cascade_classifier.s"
+	@echo "... src/odometry.o"
+	@echo "... src/odometry.i"
+	@echo "... src/odometry.s"
+	@echo "... src/odometry_publish.o"
+	@echo "... src/odometry_publish.i"
+	@echo "... src/odometry_publish.s"
 	@echo "... src/publisher_lambda_function.o"
 	@echo "... src/publisher_lambda_function.i"
 	@echo "... src/publisher_lambda_function.s"

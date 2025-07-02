@@ -1,0 +1,22 @@
+[0.006s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.042s] [  7%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[0.043s] [ 15%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[0.049s] [ 30%] Built target listener
+[0.049s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kros_gz_example_application/odometry.hpp: No such file or directory
+[0.049s]     1 | #include [01;31m[K"ros_gz_example_application/odometry.hpp"[m[K
+[0.049s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.049s] compilation terminated.
+[0.049s] [ 46%] Built target image_processor_node
+[0.050s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+[0.050s] gmake[2]: *** Waiting for unfinished jobs....
+[0.050s] [ 61%] Built target talker
+[0.051s] [ 76%] Built target UAV_pid_control_node
+[0.052s] [ 92%] Built target Robot_pid_control_node
+[0.144s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/joint_state.hpp: No such file or directory
+[0.144s]     5 | #include [01;31m[K"sensor_msgs/msg/joint_state.hpp"[m[K
+[0.144s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.144s] compilation terminated.
+[0.147s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+[0.147s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[0.148s] gmake: *** [Makefile:146: all] Error 2
+[0.150s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

@@ -1,0 +1,36 @@
+[0.119s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.222s] [ 15%] Built target listener
+[0.222s] [ 30%] Built target talker
+[0.222s] [ 46%] Built target UAV_pid_control_node
+[0.222s] [ 76%] Built target image_processor_node
+[0.222s] [ 76%] Built target Robot_pid_control_node
+[0.222s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[1.864s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In member function ‘[01m[Kvoid OdometryPublisher::[01;32m[KtimerCallback[m[K()[m[K’:
+[1.864s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kfl_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Kfl_speed_[m[K’?
+[1.864s]    98 |     bool updated = odom_.update([01;31m[Kfl_speed[m[K, fr_speed, rl_speed, rr_speed, front_steer, rear_steer, now);
+[1.864s]       |                                 [01;31m[K^~~~~~~~[m[K
+[1.864s]       |                                 [32m[Kfl_speed_[m[K
+[1.867s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kfr_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_speed_[m[K’?
+[1.867s]    98 |     bool updated = odom_.update(fl_speed, [01;31m[Kfr_speed[m[K, rl_speed, rr_speed, front_steer, rear_steer, now);
+[1.867s]       |                                           [01;31m[K^~~~~~~~[m[K
+[1.867s]       |                                           [32m[Kfr_speed_[m[K
+[1.870s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:53:[m[K [01;31m[Kerror: [m[K‘[01m[Krl_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Krl_speed_[m[K’?
+[1.870s]    98 |     bool updated = odom_.update(fl_speed, fr_speed, [01;31m[Krl_speed[m[K, rr_speed, front_steer, rear_steer, now);
+[1.870s]       |                                                     [01;31m[K^~~~~~~~[m[K
+[1.870s]       |                                                     [32m[Krl_speed_[m[K
+[1.873s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:63:[m[K [01;31m[Kerror: [m[K‘[01m[Krr_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_speed_[m[K’?
+[1.873s]    98 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, [01;31m[Krr_speed[m[K, front_steer, rear_steer, now);
+[1.873s]       |                                                               [01;31m[K^~~~~~~~[m[K
+[1.873s]       |                                                               [32m[Krr_speed_[m[K
+[1.877s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kfront_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_steer_[m[K’?
+[1.877s]    98 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, rr_speed, [01;31m[Kfront_steer[m[K, rear_steer, now);
+[1.877s]       |                                                                         [01;31m[K^~~~~~~~~~~[m[K
+[1.877s]       |                                                                         [32m[Kfr_steer_[m[K
+[1.880s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:86:[m[K [01;31m[Kerror: [m[K‘[01m[Krear_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_steer_[m[K’?
+[1.880s]    98 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, rr_speed, front_steer, [01;31m[Krear_steer[m[K, now);
+[1.880s]       |                                                                                      [01;31m[K^~~~~~~~~~[m[K
+[1.880s]       |                                                                                      [32m[Krr_steer_[m[K
+[2.823s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+[2.823s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[2.824s] gmake: *** [Makefile:146: all] Error 2
+[2.825s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

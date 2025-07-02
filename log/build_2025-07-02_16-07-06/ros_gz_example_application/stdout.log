@@ -1,0 +1,6 @@
+[ 15%] Built target Robot_pid_control_node
+[ 76%] Built target listener
+[ 76%] Built target image_processor_node
+[ 76%] Built target UAV_pid_control_node
+[ 76%] Built target talker
+[ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m

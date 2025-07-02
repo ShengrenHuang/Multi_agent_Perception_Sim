@@ -1,0 +1,115 @@
+[0.012s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake /home/cirl/ros_gz_project_template-main/fws_robot_sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cirl/ros_gz_project_template-main/install/fws_robot_sim
+[0.233s] -- The C compiler identification is GNU 13.3.0
+[0.233s] -- The CXX compiler identification is GNU 13.3.0
+[0.233s] -- Detecting C compiler ABI info
+[0.233s] -- Detecting C compiler ABI info - done
+[0.233s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.233s] -- Detecting C compile features
+[0.233s] -- Detecting C compile features - done
+[0.233s] -- Detecting CXX compiler ABI info
+[0.233s] -- Detecting CXX compiler ABI info - done
+[0.236s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.236s] -- Detecting CXX compile features
+[0.236s] -- Detecting CXX compile features - done
+[0.240s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.321s] -- Found Python3: /home/cirl/ros2_rl_env/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.363s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.396s] -- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+[0.399s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.474s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.477s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.477s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.478s] -- Added test 'lint_cmake' to check CMake code style
+[0.478s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.480s] -- Added test 'xmllint' to check XML markup files
+[0.481s] -- Configuring done (0.5s)
+[0.482s] -- Generating done (0.0s)
+[0.483s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/fws_robot_sim
+[0.486s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake /home/cirl/ros_gz_project_template-main/fws_robot_sim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/cirl/ros_gz_project_template-main/install/fws_robot_sim
+[0.487s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_robot_sim -- -j32 -l32
+[0.515s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_robot_sim -- -j32 -l32
+[0.516s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_robot_sim
+[0.521s] -- Install configuration: ""
+[0.521s] -- Execute custom install script
+[0.522s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/launch/fws_robot_spawn.launch.py
+[0.536s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world.sdf
+[0.536s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world2.sdf
+[0.543s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world3.sdf
+[0.548s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world4.sdf
+[0.555s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world5.sdf
+[0.564s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world6.sdf
+[0.571s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world7.sdf
+[0.577s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world8.sdf
+[0.583s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world9.sdf
+[0.591s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/asphalt.png
+[0.599s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/house.png
+[0.606s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/muds.jpg
+[0.611s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/house.dae
+[0.616s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road.stl
+[0.624s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road2.stl
+[0.630s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road3.stl
+[0.636s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road4.stl
+[0.643s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road_1.dae
+[0.648s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model.config
+[0.656s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model.sdf
+[0.663s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/Textures/asphalt.png
+[0.668s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/Textures/muds.jpg
+[0.674s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road.stl
+[0.679s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road2.stl
+[0.686s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road3.stl
+[0.694s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road4.stl
+[0.702s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road_1.dae
+[0.709s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model.config
+[0.715s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model.sdf
+[0.722s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Rock1.dae
+[0.727s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Rock2.dae
+[0.734s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Textures/Rock-Texture-Surface.jpg
+[0.740s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Textures/black-stone.png
+[0.746s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model.config
+[0.752s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model.sdf
+[0.757s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/media/Textures/Grass.png
+[0.764s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/media/terrain_1.dae
+[0.770s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model.config
+[0.776s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model.sdf
+[0.783s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/ardrone.dae
+[0.789s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/firefly.dae
+[0.794s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/hummingbird.dae
+[0.800s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/iris.dae
+[0.806s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11.dae
+[0.812s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11_propeller_ccw.dae
+[0.819s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11_propeller_cw.dae
+[0.825s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9.dae
+[0.833s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9_propeller_ccw.dae
+[0.838s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9_propeller_cw.dae
+[0.844s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/pelican.dae
+[0.852s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/propeller_ccw.dae
+[0.857s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/propeller_cw.dae
+[0.865s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_camera.dae
+[0.871s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_camera.jpg
+[0.879s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_sensor.dae
+[0.887s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_sensor.jpg
+[0.896s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/x3.dae
+[0.902s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/x3.jpg
+[0.910s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/model.config
+[0.916s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/model.sdf
+[0.922s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/1.jpg
+[0.929s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/2.jpg
+[0.937s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/3.jpg
+[0.943s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/4.jpg
+[0.947s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/5.jpg
+[0.952s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/package_run_dependencies/fws_robot_sim
+[0.957s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/parent_prefix_path/fws_robot_sim
+[0.963s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/ament_prefix_path.sh
+[0.969s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/ament_prefix_path.dsv
+[0.974s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/path.sh
+[0.981s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/path.dsv
+[0.987s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.bash
+[0.992s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.sh
+[0.996s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.zsh
+[1.001s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.dsv
+[1.006s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/package.dsv
+[1.011s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/packages/fws_robot_sim
+[1.015s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/cmake/fws_robot_simConfig.cmake
+[1.021s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/cmake/fws_robot_simConfig-version.cmake
+[1.027s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/package.xml
+[1.036s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_rl:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros2_rl_env) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(ros2_rl_env) /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_robot_sim

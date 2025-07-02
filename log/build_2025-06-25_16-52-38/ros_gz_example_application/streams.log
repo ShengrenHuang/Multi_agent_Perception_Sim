@@ -1,0 +1,58 @@
+[0.007s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.026s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.194s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.197s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.212s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.216s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.222s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.228s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.260s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.260s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.309s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.345s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.356s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[0.377s] -- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)
+[0.383s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.397s] -- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)
+[0.398s] -- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.400s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.401s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.506s] -- Configuring done (0.5s)
+[0.524s] -- Generating done (0.0s)
+[0.530s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[0.559s] [ 15%] Built target Robot_pid_control_node
+[0.560s] [ 30%] Built target listener
+[0.560s] [ 46%] Built target talker
+[0.560s] [ 61%] Built target UAV_pid_control_node
+[0.562s] [ 76%] Built target image_processor_node
+[0.563s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[0.565s] [ 92%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[0.678s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:11:10:[m[K [01;31m[Kfatal error: [m[Kodometry.hpp: No such file or directory
+[0.678s]    11 | #include [01;31m[K"odometry.hpp"[m[K
+[0.678s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[0.678s] compilation terminated.
+[0.679s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+[0.679s] gmake[2]: *** Waiting for unfinished jobs....
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:30:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(double, double, double, double, double, double, const rclcpp::Time&)[m[K’
+[1.445s]    30 | bool [01;31m[KOdometry[m[K::update(double fl_speed, double fr_speed,
+[1.445s]       |      [01;31m[K^~~~~~~~[m[K
+[1.445s] In file included from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:1[m[K:
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:85:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(const double&, const double&, const double&, const double&, double, double, const rclcpp::Time&)[m[K’
+[1.445s]    85 |     bool [01;36m[Kupdate[m[K(const double& fl_speed, const double& fr_speed, const double& rl_speed, const double& rr_speed,
+[1.445s]       |          [01;36m[K^~~~~~[m[K
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:53:9:[m[K [01;36m[Knote: [m[K‘[01m[Kclass four_wheel_steering_controller::Odometry[m[K’ defined here
+[1.445s]    53 |   class [01;36m[KOdometry[m[K
+[1.445s]       |         [01;36m[K^~~~~~~~[m[K
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:56:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid four_wheel_steering_controller::Odometry::[01;32m[KintegrateXY[m[K(double, double, double)[m[K’
+[1.445s]    56 | void [01;31m[KOdometry[m[K::integrateXY(double lx, double ly, double da)
+[1.445s]       |      [01;31m[K^~~~~~~~[m[K
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:216:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid four_wheel_steering_controller::Odometry::[01;32m[KintegrateXY[m[K(double, double, double, bool)[m[K’
+[1.445s]   216 |     void [01;36m[KintegrateXY[m[K(double linear_x, double linear_y, double angular, bool pivot_turn);
+[1.445s]       |          [01;36m[K^~~~~~~~~~~[m[K
+[1.445s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:53:9:[m[K [01;36m[Knote: [m[K‘[01m[Kclass four_wheel_steering_controller::Odometry[m[K’ defined here
+[1.445s]    53 |   class [01;36m[KOdometry[m[K
+[1.445s]       |         [01;36m[K^~~~~~~~[m[K
+[1.535s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+[1.535s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[1.535s] gmake: *** [Makefile:146: all] Error 2
+[1.537s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

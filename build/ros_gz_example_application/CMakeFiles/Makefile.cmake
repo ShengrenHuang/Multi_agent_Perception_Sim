@@ -937,4 +937,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/image_processor_node.dir/DependInfo.cmake"
   "CMakeFiles/UAV_pid_control_node.dir/DependInfo.cmake"
   "CMakeFiles/Robot_pid_control_node.dir/DependInfo.cmake"
+  "CMakeFiles/odometry_publisher_node.dir/DependInfo.cmake"
   )

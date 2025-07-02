@@ -1,0 +1,160 @@
+[0.110s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.211s] [ 15%] Built target Robot_pid_control_node
+[0.211s] [ 76%] Built target listener
+[0.212s] [ 76%] Built target image_processor_node
+[0.212s] [ 76%] Built target UAV_pid_control_node
+[0.212s] [ 76%] Built target talker
+[0.212s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:39:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.815s]    54 |   rclcpp::Subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>::SharedPtr vel_sub_;
+[1.815s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.815s]    54 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray[01;31m[K>[m[K::SharedPtr vel_sub_;
+[1.815s]       |                                                        [01;31m[K^[m[K
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[1.815s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.815s]    54 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::[01;31m[KSharedPtr[m[K vel_sub_;
+[1.815s]       |                                                           [01;31m[K^~~~~~~~~[m[K
+[1.815s]       |                                                                    [32m[K;[m[K
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_sub_[m[K’ does not name a type
+[1.817s]    54 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr [01;31m[Kvel_sub_[m[K;
+[1.817s]       |                                                                     [01;31m[K^~~~~~~~[m[K
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:39:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.817s]    55 |   rclcpp::Subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>::SharedPtr steer_sub_;
+[1.817s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.817s]    55 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray[01;31m[K>[m[K::SharedPtr steer_sub_;
+[1.817s]       |                                                        [01;31m[K^[m[K
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:56:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:59:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.817s]    55 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::[01;31m[KSharedPtr[m[K steer_sub_;
+[1.817s]       |                                                           [01;31m[K^~~~~~~~~[m[K
+[1.817s]       |                                                                    [32m[K;[m[K
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:59:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint OdometryPublisher::SharedPtr[m[K’
+[1.817s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:54:59:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint OdometryPublisher::SharedPtr[m[K’
+[1.817s]    54 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::[01;36m[KSharedPtr[m[K vel_sub_;
+[1.817s]       |                                                           [01;36m[K^~~~~~~~~[m[K
+[1.819s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:55:69:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteer_sub_[m[K’ does not name a type
+[1.819s]    55 |   rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr [01;31m[Ksteer_sub_[m[K;
+[1.820s]       |                                                                     [01;31m[K^~~~~~~~~~[m[K
+[1.820s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:64:35:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ in namespace ‘[01m[Kstd_msgs::msg[m[K’ does not name a type
+[1.820s]    64 |   void velCb(const std_msgs::msg::[01;31m[KFloat64MultiArray[m[K::SharedPtr msg)
+[1.820s]       |                                   [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.820s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:64:64:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[1.820s]    64 |   void velCb(const std_msgs::msg::Float64MultiArray::SharedPtr [01;31m[Kmsg[m[K)
+[1.820s]       |                                                                [01;31m[K^~~[m[K
+[1.820s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:64:63:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[1.820s]    64 |   void velCb[34m[K([m[Kconst std_msgs::msg::Float64MultiArray::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K)
+[1.820s]       |             [34m[K~[m[K                                                 [01;31m[K^[m[K[32m[K~~~[m[K
+[1.820s]       |                                                               [32m[K)[m[K
+[1.820s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:64:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.820s]    64 |   void velCb(const std_msgs::msg::Float64MultiArray::[01;31m[KSharedPtr[m[K msg)
+[1.820s]       |                                                      [01;31m[K^~~~~~~~~[m[K
+[1.820s]       |                                                               [32m[K;[m[K
+[1.820s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:64:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[1.820s]    64 |   void velCb(const std_msgs::msg::Float64MultiArray::SharedPtr [01;31m[Kmsg[m[K)
+[1.820s]       |                                                                [01;31m[K^~~[m[K
+[1.821s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:74:37:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ in namespace ‘[01m[Kstd_msgs::msg[m[K’ does not name a type
+[1.821s]    74 |   void steerCb(const std_msgs::msg::[01;31m[KFloat64MultiArray[m[K::SharedPtr msg)
+[1.821s]       |                                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.821s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:74:66:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[1.821s]    74 |   void steerCb(const std_msgs::msg::Float64MultiArray::SharedPtr [01;31m[Kmsg[m[K)
+[1.821s]       |                                                                  [01;31m[K^~~[m[K
+[1.821s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:74:65:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[1.821s]    74 |   void steerCb[34m[K([m[Kconst std_msgs::msg::Float64MultiArray::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K)
+[1.821s]       |               [34m[K~[m[K                                                 [01;31m[K^[m[K[32m[K~~~[m[K
+[1.821s]       |                                                                 [32m[K)[m[K
+[1.821s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:74:56:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.821s]    74 |   void steerCb(const std_msgs::msg::Float64MultiArray::[01;31m[KSharedPtr[m[K msg)
+[1.821s]       |                                                        [01;31m[K^~~~~~~~~[m[K
+[1.821s]       |                                                                 [32m[K;[m[K
+[1.821s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:74:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[1.821s]    74 |   void steerCb(const std_msgs::msg::Float64MultiArray::SharedPtr [01;31m[Kmsg[m[K)
+[1.821s]       |                                                                  [01;31m[K^~~[m[K
+[1.827s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In constructor ‘[01m[KOdometryPublisher::[01;32m[KOdometryPublisher[m[K()[m[K’:
+[1.827s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_sub_[m[K’ was not declared in this scope
+[1.827s]    34 |     [01;31m[Kvel_sub_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+[1.827s]       |     [01;31m[K^~~~~~~~[m[K
+[1.827s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:34:57:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.827s]    34 |     vel_sub_ = this->create_subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>(
+[1.827s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.829s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:34:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOdometryPublisher::create_subscription<<expression error> >(const char [38], int, std::_Bind_helper<false, void (OdometryPublisher::*)(...), OdometryPublisher*, const std::_Placeholder<1>&>::type)[m[K’
+[1.829s]    34 |     vel_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+[1.829s]       |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.829s]    35 | [01;31m[K      "/forward_velocity_controller/commands", 10,[m[K
+[1.829s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         
+[1.829s]    36 | [01;31m[K      std::bind(&OdometryPublisher::velCb, this, _1))[m[K;
+[1.829s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                      
+[1.829s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.829s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.829s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[1.830s]                  from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:2[m[K:
+[1.830s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:221:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::[01;32m[Kcreate_subscription[m[K(const std::string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[1.830s]   221 |   [01;36m[Kcreate_subscription[m[K(
+[1.830s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.830s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:221:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.830s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:34:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.830s]    34 |     vel_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+[1.830s]       |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.830s]    35 | [01;31m[K      "/forward_velocity_controller/commands", 10,[m[K
+[1.830s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                         
+[1.830s]    36 | [01;31m[K      std::bind(&OdometryPublisher::velCb, this, _1))[m[K;
+[1.830s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                      
+[1.834s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:38:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteer_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[KsteerCb[m[K’?
+[1.834s]    38 |     [01;31m[Ksteer_sub_[m[K = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+[1.834s]       |     [01;31m[K^~~~~~~~~~[m[K
+[1.834s]       |     [32m[KsteerCb[m[K
+[1.834s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:38:59:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64MultiArray[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[1.834s]    38 |     steer_sub_ = this->create_subscription<std_msgs::msg::[01;31m[KFloat64MultiArray[m[K>(
+[1.834s]       |                                                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.834s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:38:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOdometryPublisher::create_subscription<<expression error> >(const char [38], int, std::_Bind_helper<false, void (OdometryPublisher::*)(...), OdometryPublisher*, const std::_Placeholder<1>&>::type)[m[K’
+[1.834s]    38 |     steer_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+[1.834s]       |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.834s]    39 | [01;31m[K      "/forward_position_controller/commands", 10,[m[K
+[1.834s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                           
+[1.834s]    40 | [01;31m[K      std::bind(&OdometryPublisher::steerCb, this, _1))[m[K;
+[1.834s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                      
+[1.834s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:221:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::[01;32m[Kcreate_subscription[m[K(const std::string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[1.834s]   221 |   [01;36m[Kcreate_subscription[m[K(
+[1.834s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.834s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:221:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.834s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:38:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.834s]    38 |     steer_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64MultiArray>([m[K
+[1.834s]       |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[1.834s]    39 | [01;31m[K      "/forward_position_controller/commands", 10,[m[K
+[1.834s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                           
+[1.834s]    40 | [01;31m[K      std::bind(&OdometryPublisher::steerCb, this, _1))[m[K;
+[1.834s]       |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                      
+[1.840s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In member function ‘[01m[Kvoid OdometryPublisher::[01;32m[KtimerCallback[m[K()[m[K’:
+[1.840s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kfl_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Kfl_speed_[m[K’?
+[1.840s]    96 |     bool updated = odom_.update([01;31m[Kfl_speed[m[K, fr_speed, rl_speed, rr_speed, front_steer, rear_steer, now);
+[1.840s]       |                                 [01;31m[K^~~~~~~~[m[K
+[1.840s]       |                                 [32m[Kfl_speed_[m[K
+[1.843s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kfr_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_speed_[m[K’?
+[1.843s]    96 |     bool updated = odom_.update(fl_speed, [01;31m[Kfr_speed[m[K, rl_speed, rr_speed, front_steer, rear_steer, now);
+[1.843s]       |                                           [01;31m[K^~~~~~~~[m[K
+[1.843s]       |                                           [32m[Kfr_speed_[m[K
+[1.846s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:53:[m[K [01;31m[Kerror: [m[K‘[01m[Krl_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Krl_speed_[m[K’?
+[1.846s]    96 |     bool updated = odom_.update(fl_speed, fr_speed, [01;31m[Krl_speed[m[K, rr_speed, front_steer, rear_steer, now);
+[1.846s]       |                                                     [01;31m[K^~~~~~~~[m[K
+[1.846s]       |                                                     [32m[Krl_speed_[m[K
+[1.848s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:63:[m[K [01;31m[Kerror: [m[K‘[01m[Krr_speed[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_speed_[m[K’?
+[1.848s]    96 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, [01;31m[Krr_speed[m[K, front_steer, rear_steer, now);
+[1.848s]       |                                                               [01;31m[K^~~~~~~~[m[K
+[1.848s]       |                                                               [32m[Krr_speed_[m[K
+[1.852s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kfront_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_steer_[m[K’?
+[1.852s]    96 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, rr_speed, [01;31m[Kfront_steer[m[K, rear_steer, now);
+[1.852s]       |                                                                         [01;31m[K^~~~~~~~~~~[m[K
+[1.852s]       |                                                                         [32m[Kfr_steer_[m[K
+[1.856s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:96:86:[m[K [01;31m[Kerror: [m[K‘[01m[Krear_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_steer_[m[K’?
+[1.856s]    96 |     bool updated = odom_.update(fl_speed, fr_speed, rl_speed, rr_speed, front_steer, [01;31m[Krear_steer[m[K, now);
+[1.856s]       |                                                                                      [01;31m[K^~~~~~~~~~[m[K
+[1.856s]       |                                                                                      [32m[Krr_steer_[m[K
+[2.397s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+[2.398s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[2.398s] gmake: *** [Makefile:146: all] Error 2
+[2.399s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

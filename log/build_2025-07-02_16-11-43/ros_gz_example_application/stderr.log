@@ -1,0 +1,28 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In member function ‘[01m[Kvoid OdometryPublisher::[01;32m[KtimerCallback[m[K()[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Kfl_speed[m[K’; did you mean ‘[01m[Kfl_speed_[m[K’?
+   98 |     bool updated = odom_.update(this->[01;31m[Kfl_speed[m[K, this->fr_speed, this->rl_speed, this->rr_speed, this->front_steer, this->rear_steer, now);
+      |                                       [01;31m[K^~~~~~~~[m[K
+      |                                       [32m[Kfl_speed_[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Kfr_speed[m[K’; did you mean ‘[01m[Kfr_speed_[m[K’?
+   98 |     bool updated = odom_.update(this->fl_speed, this->[01;31m[Kfr_speed[m[K, this->rl_speed, this->rr_speed, this->front_steer, this->rear_steer, now);
+      |                                                       [01;31m[K^~~~~~~~[m[K
+      |                                                       [32m[Kfr_speed_[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Krl_speed[m[K’; did you mean ‘[01m[Krl_speed_[m[K’?
+   98 |     bool updated = odom_.update(this->fl_speed, this->fr_speed, this->[01;31m[Krl_speed[m[K, this->rr_speed, this->front_steer, this->rear_steer, now);
+      |                                                                       [01;31m[K^~~~~~~~[m[K
+      |                                                                       [32m[Krl_speed_[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Krr_speed[m[K’; did you mean ‘[01m[Krr_speed_[m[K’?
+   98 |     bool updated = odom_.update(this->fl_speed, this->fr_speed, this->rl_speed, this->[01;31m[Krr_speed[m[K, this->front_steer, this->rear_steer, now);
+      |                                                                                       [01;31m[K^~~~~~~~[m[K
+      |                                                                                       [32m[Krr_speed_[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:103:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Kfront_steer[m[K’; did you mean ‘[01m[Kfr_steer_[m[K’?
+   98 |     bool updated = odom_.update(this->fl_speed, this->fr_speed, this->rl_speed, this->rr_speed, this->[01;31m[Kfront_steer[m[K, this->rear_steer, now);
+      |                                                                                                       [01;31m[K^~~~~~~~~~~[m[K
+      |                                                                                                       [32m[Kfr_steer_[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:98:122:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass OdometryPublisher[m[K’ has no member named ‘[01m[Krear_steer[m[K’; did you mean ‘[01m[Krr_steer_[m[K’?
+   98 |     bool updated = odom_.update(this->fl_speed, this->fr_speed, this->rl_speed, this->rr_speed, this->front_steer, this->[01;31m[Krear_steer[m[K, now);
+      |                                                                                                                          [01;31m[K^~~~~~~~~~[m[K
+      |                                                                                                                          [32m[Krr_steer_[m[K
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

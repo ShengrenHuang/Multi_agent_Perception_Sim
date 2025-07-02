@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.000094] (-) JobUnselected: {'identifier': 'fws_description'}
+[0.000502] (-) JobUnselected: {'identifier': 'fws_robot_sim'}
+[0.000524] (-) JobUnselected: {'identifier': 'gps_to_gazebo'}
+[0.000600] (-) JobUnselected: {'identifier': 'ros_gz_example_bringup'}
+[0.000619] (-) JobUnselected: {'identifier': 'ros_gz_example_description'}
+[0.000632] (-) JobUnselected: {'identifier': 'ros_gz_example_gazebo'}
+[0.000643] (-) JobUnselected: {'identifier': 'ros_rl'}
+[0.000654] (-) JobUnselected: {'identifier': 'velocity_pub'}
+[0.000667] (ros_gz_example_application) JobQueued: {'identifier': 'ros_gz_example_application', 'dependencies': OrderedDict()}
+[0.000682] (ros_gz_example_application) JobStarted: {'identifier': 'ros_gz_example_application'}
+[0.005319] (ros_gz_example_application) JobProgress: {'identifier': 'ros_gz_example_application', 'progress': 'cmake'}
+[0.005673] (ros_gz_example_application) JobProgress: {'identifier': 'ros_gz_example_application', 'progress': 'build'}
+[0.006021] (ros_gz_example_application) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application', '--', '-j32', '-l32'], 'cwd': '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/home/cirl/ros_gz_project_template-main/install/ros_gz_example_gazebo/lib/ros_gz_example_gazebo/:/opt/ros/jazzy/lib:', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/cirl/ros_gz_project_template-main/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share', 'USER': 'cirl', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/cirl', 'CYCLONEDDS_URI': '<CycloneDDS><Domain><General><DontRoute>true</></></></>', 'DESKTOP_SESSION': 'ubuntu-xorg', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2955', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1001/bus,guid=be039f5ee4290e114092554d685c4086', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/cirl/ros_gz_project_template-main/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'cirl', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1001.slice/user@1001.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'cirl', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/jazzy/share/', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ece-l320-lnx01:@/tmp/.ICE-unix/2955,unix/ece-l320-lnx01:/tmp/.ICE-unix/2955', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bc799bb6_8443_4dbb_a79e_310848e14ebf', 'XDG_RUNTIME_DIR': '/run/user/1001', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1001/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.109', 'SSH_AUTH_SOCK': '/run/user/1001/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/cirl/ros_gz_project_template-main/install/velocity_pub:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_bringup:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_description:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_application:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/fws_robot_sim:/home/cirl/ros_gz_project_template-main/install/fws_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'IGN_GAZEBO_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GPG_AGENT_INFO': '/run/user/1001/gnupg/S.gpg-agent:0:1', 'GZ_VERSION': 'harmonic', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1001/bus,guid=be039f5ee4290e114092554d685c4086', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cirl/ros_gz_project_template-main/build/ros_rl:/home/cirl/ros_gz_project_template-main/install/ros_rl/lib/python3.12/site-packages:/home/cirl/ros_gz_project_template-main/build/gps_to_gazebo:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/cirl/ros_gz_project_template-main/install/velocity_pub:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_bringup:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_gazebo:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_description:/home/cirl/ros_gz_project_template-main/install/ros_gz_example_application:/home/cirl/ros_gz_project_template-main/install/fws_robot_sim:/home/cirl/ros_gz_project_template-main/install/fws_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy'}), 'shell': False}
+[0.027112] (ros_gz_example_application) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.100096] (-) TimerEvent: {}
+[0.183255] (ros_gz_example_application) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.190795] (ros_gz_example_application) StdoutLine: {'line': b'-- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.200306] (-) TimerEvent: {}
+[0.210773] (ros_gz_example_application) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.216213] (ros_gz_example_application) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.223893] (ros_gz_example_application) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.232082] (ros_gz_example_application) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.269566] (ros_gz_example_application) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.270781] (ros_gz_example_application) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300394] (-) TimerEvent: {}
+[0.333204] (ros_gz_example_application) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.374605] (ros_gz_example_application) StdoutLine: {'line': b'-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[0.387001] (ros_gz_example_application) StdoutLine: {'line': b'-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)\n'}
+[0.400452] (-) TimerEvent: {}
+[0.412282] (ros_gz_example_application) StdoutLine: {'line': b'-- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)\n'}
+[0.420819] (ros_gz_example_application) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.437114] (ros_gz_example_application) StdoutLine: {'line': b'-- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[0.439513] (ros_gz_example_application) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[0.442017] (ros_gz_example_application) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[0.442687] (ros_gz_example_application) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.500609] (-) TimerEvent: {}
+[0.562414] (ros_gz_example_application) StdoutLine: {'line': b'-- Configuring done (0.5s)\n'}
+[0.581006] (ros_gz_example_application) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.586249] (ros_gz_example_application) StdoutLine: {'line': b'-- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application\n'}
+[0.600766] (-) TimerEvent: {}
+[0.612824] (ros_gz_example_application) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o\x1b[0m\n'}
+[0.612941] (ros_gz_example_application) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o\x1b[0m\n'}
+[0.614450] (ros_gz_example_application) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o\x1b[0m\n'}
+[0.617096] (ros_gz_example_application) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_lambda_function.cpp.o\x1b[0m\n'}
+[0.617702] (ros_gz_example_application) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o\x1b[0m\n'}
+[0.618357] (ros_gz_example_application) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_lambda_function.cpp.o\x1b[0m\n'}
+[0.619254] (ros_gz_example_application) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/image_processor_node.dir/src/cascade_classifier.cpp.o\x1b[0m\n'}
+[0.621095] (ros_gz_example_application) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kodometry.hpp: No such file or directory\n'}
+[0.621167] (ros_gz_example_application) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"odometry.hpp"\x1b[m\x1b[K\n'}
+[0.621198] (ros_gz_example_application) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.621226] (ros_gz_example_application) StderrLine: {'line': b'compilation terminated.\n'}
+[0.621544] (ros_gz_example_application) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1\n'}
+[0.621589] (ros_gz_example_application) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[0.700871] (-) TimerEvent: {}
+[0.739734] (ros_gz_example_application) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:5:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Ksensor_msgs/msg/joint_state.hpp: No such file or directory\n'}
+[0.739851] (ros_gz_example_application) StderrLine: {'line': b'    5 | #include \x1b[01;31m\x1b[K"sensor_msgs/msg/joint_state.hpp"\x1b[m\x1b[K\n'}
+[0.739882] (ros_gz_example_application) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.739908] (ros_gz_example_application) StderrLine: {'line': b'compilation terminated.\n'}
+[0.741665] (ros_gz_example_application) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1\n'}
+[0.741757] (ros_gz_example_application) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2\n'}
+[0.741802] (ros_gz_example_application) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.800955] (-) TimerEvent: {}
+[0.901206] (-) TimerEvent: {}
+[1.001448] (-) TimerEvent: {}
+[1.101697] (-) TimerEvent: {}
+[1.202017] (-) TimerEvent: {}
+[1.302300] (-) TimerEvent: {}
+[1.402614] (-) TimerEvent: {}
+[1.502937] (-) TimerEvent: {}
+[1.603153] (-) TimerEvent: {}
+[1.703469] (-) TimerEvent: {}
+[1.803762] (-) TimerEvent: {}
+[1.904062] (-) TimerEvent: {}
+[2.004363] (-) TimerEvent: {}
+[2.104578] (-) TimerEvent: {}
+[2.204880] (-) TimerEvent: {}
+[2.305182] (-) TimerEvent: {}
+[2.405473] (-) TimerEvent: {}
+[2.505764] (-) TimerEvent: {}
+[2.606059] (-) TimerEvent: {}
+[2.640911] (ros_gz_example_application) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[2.706148] (-) TimerEvent: {}
+[2.738139] (ros_gz_example_application) StdoutLine: {'line': b'[ 61%] Built target talker\n'}
+[2.806299] (-) TimerEvent: {}
+[2.906585] (-) TimerEvent: {}
+[3.006785] (-) TimerEvent: {}
+[3.107072] (-) TimerEvent: {}
+[3.207271] (-) TimerEvent: {}
+[3.307459] (-) TimerEvent: {}
+[3.407644] (-) TimerEvent: {}
+[3.507830] (-) TimerEvent: {}
+[3.608106] (-) TimerEvent: {}
+[3.708387] (-) TimerEvent: {}
+[3.808691] (-) TimerEvent: {}
+[3.908929] (-) TimerEvent: {}
+[4.009231] (-) TimerEvent: {}
+[4.028399] (ros_gz_example_application) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[4.109413] (-) TimerEvent: {}
+[4.155491] (ros_gz_example_application) StdoutLine: {'line': b'[ 69%] Built target listener\n'}
+[4.209592] (-) TimerEvent: {}
+[4.309881] (-) TimerEvent: {}
+[4.368723] (ros_gz_example_application) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable UAV_pid_control_node\x1b[0m\n'}
+[4.409783] (ros_gz_example_application) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX executable Robot_pid_control_node\x1b[0m\n'}
+[4.409901] (-) TimerEvent: {}
+[4.505943] (ros_gz_example_application) StdoutLine: {'line': b'[ 84%] Built target UAV_pid_control_node\n'}
+[4.510108] (-) TimerEvent: {}
+[4.575797] (ros_gz_example_application) StdoutLine: {'line': b'[ 84%] Built target Robot_pid_control_node\n'}
+[4.610277] (-) TimerEvent: {}
+[4.710566] (-) TimerEvent: {}
+[4.800531] (ros_gz_example_application) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable image_processor_node\x1b[0m\n'}
+[4.810704] (-) TimerEvent: {}
+[4.911040] (-) TimerEvent: {}
+[4.948535] (ros_gz_example_application) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.406, needed by /opt/ros/jazzy/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.412\n'}
+[4.948676] (ros_gz_example_application) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.406, needed by /opt/ros/jazzy/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.412\n'}
+[4.948712] (ros_gz_example_application) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.406, needed by /opt/ros/jazzy/lib/libcv_bridge.so, may conflict with libopencv_core.so.412\n'}
+[5.011252] (-) TimerEvent: {}
+[5.109036] (ros_gz_example_application) StdoutLine: {'line': b'[ 92%] Built target image_processor_node\n'}
+[5.109915] (ros_gz_example_application) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.111600] (ros_gz_example_application) CommandEnded: {'returncode': 2}
+[5.111793] (-) TimerEvent: {}
+[5.117213] (ros_gz_example_application) JobEnded: {'identifier': 'ros_gz_example_application', 'rc': 2}
+[5.127641] (-) EventReactorShutdown: {}

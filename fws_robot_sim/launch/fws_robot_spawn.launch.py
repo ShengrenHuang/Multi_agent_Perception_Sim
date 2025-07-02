@@ -159,6 +159,13 @@ def generate_launch_description():
         output='screen'
     )
 
+    odometry_publisher_node = Node(
+        package='ros_gz_example_application',
+        executable='odometry_publisher_node',
+        name='odometry_publisher_node',
+        output='screen'
+    )
+
     robot_pid_node = Node(
         package='ros_gz_example_application',
         executable='Robot_pid_control_node',
@@ -189,7 +196,8 @@ def generate_launch_description():
         rviz,
         detection,
         gps_node,
-        robot_pid_node
+        odometry_publisher_node
+        # robot_pid_node
         # UAV_pid,
         # uav_rl_node,
     ])

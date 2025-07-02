@@ -1,0 +1,17 @@
+/usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `main':
+odometry_publish.cpp:(.text+0x69): multiple definition of `main'; CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o:odometry.cpp:(.text+0x69): first defined here
+/usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o: in function `OdometryPublisher::OdometryPublisher()':
+odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x130): undefined reference to `four_wheel_steering_controller::Odometry::Odometry(unsigned long)'
+/usr/bin/ld: odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x1f1): undefined reference to `four_wheel_steering_controller::Odometry::setWheelParams(double, double, double, double)'
+/usr/bin/ld: odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x22a): undefined reference to `four_wheel_steering_controller::Odometry::init(rclcpp::Time const&)'
+/usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o: in function `OdometryPublisher::timerCallback()':
+odometry.cpp:(.text._ZN17OdometryPublisher13timerCallbackEv[_ZN17OdometryPublisher13timerCallbackEv]+0xe4): undefined reference to `four_wheel_steering_controller::Odometry::update(double const&, double const&, double const&, double const&, double, double, rclcpp::Time const&)'
+/usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `OdomNode::OdomNode()':
+odometry_publish.cpp:(.text._ZN8OdomNodeC2Ev[_ZN8OdomNodeC5Ev]+0x184): undefined reference to `four_wheel_steering_controller::Odometry::Odometry(unsigned long)'
+/usr/bin/ld: odometry_publish.cpp:(.text._ZN8OdomNodeC2Ev[_ZN8OdomNodeC5Ev]+0x577): undefined reference to `four_wheel_steering_controller::Odometry::setWheelParams(double, double, double, double)'
+/usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `OdomNode::tick()':
+odometry_publish.cpp:(.text._ZN8OdomNode4tickEv[_ZN8OdomNode4tickEv]+0x163): undefined reference to `four_wheel_steering_controller::Odometry::update(double const&, double const&, double const&, double const&, double, double, rclcpp::Time const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:240: odometry_publisher_node] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,20 @@
+[0.005s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.048s] [ 15%] Built target listener
+[0.049s] [ 30%] Built target UAV_pid_control_node
+[0.050s] [ 46%] Built target talker
+[0.051s] [ 61%] Built target Robot_pid_control_node
+[0.051s] [ 76%] Built target image_processor_node
+[0.066s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[0.965s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:[m[K In member function ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(const double&, const double&, const double&, const double&, double, double, const rclcpp::Time&)[m[K’:
+[0.965s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:51:14:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfour_wheel_steering_controller::Odometry::integrateXY(double, double, double)[m[K’
+[0.966s]    51 |   [01;31m[KintegrateXY(linear_x_ * dt, linear_y_ * dt, angular_ * dt)[m[K;
+[0.966s]       |   [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.966s] In file included from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:1[m[K:
+[0.966s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:216:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid four_wheel_steering_controller::Odometry::[01;32m[KintegrateXY[m[K(double, double, double, bool)[m[K’
+[0.966s]   216 |     void [01;36m[KintegrateXY[m[K(double linear_x, double linear_y, double angular, bool pivot_turn);
+[0.966s]       |          [01;36m[K^~~~~~~~~~~[m[K
+[0.966s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:216:10:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[1.054s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+[1.054s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[1.055s] gmake: *** [Makefile:146: all] Error 2
+[1.056s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

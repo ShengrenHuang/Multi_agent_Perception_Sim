@@ -1,0 +1,23 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:30:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(double, double, double, double, double, double, const rclcpp::Time&)[m[K’
+   30 | bool [01;31m[KOdometry[m[K::update(double fl_speed, double fr_speed,
+      |      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:1[m[K:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:85:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(const double&, const double&, const double&, const double&, double, double, const rclcpp::Time&)[m[K’
+   85 |     bool [01;36m[Kupdate[m[K(const double& fl_speed, const double& fr_speed, const double& rl_speed, const double& rr_speed,
+      |          [01;36m[K^~~~~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:53:9:[m[K [01;36m[Knote: [m[K‘[01m[Kclass four_wheel_steering_controller::Odometry[m[K’ defined here
+   53 |   class [01;36m[KOdometry[m[K
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:56:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid four_wheel_steering_controller::Odometry::[01;32m[KintegrateXY[m[K(double, double, double)[m[K’
+   56 | void [01;31m[KOdometry[m[K::integrateXY(double lx, double ly, double da)
+      |      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:216:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid four_wheel_steering_controller::Odometry::[01;32m[KintegrateXY[m[K(double, double, double, bool)[m[K’
+  216 |     void [01;36m[KintegrateXY[m[K(double linear_x, double linear_y, double angular, bool pivot_turn);
+      |          [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/include/ros_gz_example_application/odometry.hpp:53:9:[m[K [01;36m[Knote: [m[K‘[01m[Kclass four_wheel_steering_controller::Odometry[m[K’ defined here
+   53 |   class [01;36m[KOdometry[m[K
+      |         [01;36m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

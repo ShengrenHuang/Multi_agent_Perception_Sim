@@ -49,7 +49,24 @@ ament_target_dependencies(Robot_pid_control_node
   tf2_geometry_msgs
 )
 
+add_executable(odometry_publisher_node
+  src/odometry.cpp
+  src/odometry_publish.cpp
+)
+
+
+ament_target_dependencies(odometry_publisher_node
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  sensor_msgs
+  tf2
+  tf2_ros
+)
+
+
 include_directories(
+  include
   ${OpenCV_INCLUDE_DIRS}
   /opt/ros/jazzy/include/cv_bridge
 )
@@ -67,6 +84,7 @@ install(TARGETS
     image_processor_node
     UAV_pid_control_node
     Robot_pid_control_node
+    odometry_publisher_node
     DESTINATION lib/${PROJECT_NAME})
 
 

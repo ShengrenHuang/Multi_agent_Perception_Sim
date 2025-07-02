@@ -1,0 +1,27 @@
+[0.113s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.215s] [ 76%] Built target listener
+[0.215s] [ 76%] Built target UAV_pid_control_node
+[0.215s] [ 76%] Built target image_processor_node
+[0.216s] [ 76%] Built target talker
+[0.216s] [ 76%] Built target Robot_pid_control_node
+[0.216s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[0.216s] [ 92%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[4.703s] [100%] [32m[1mLinking CXX executable odometry_publisher_node[0m
+[4.742s] /usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `main':
+[4.742s] odometry_publish.cpp:(.text+0x69): multiple definition of `main'; CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o:odometry.cpp:(.text+0x69): first defined here
+[4.862s] /usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o: in function `OdometryPublisher::OdometryPublisher()':
+[4.862s] odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x130): undefined reference to `four_wheel_steering_controller::Odometry::Odometry(unsigned long)'
+[4.862s] /usr/bin/ld: odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x1f1): undefined reference to `four_wheel_steering_controller::Odometry::setWheelParams(double, double, double, double)'
+[4.862s] /usr/bin/ld: odometry.cpp:(.text._ZN17OdometryPublisherC2Ev[_ZN17OdometryPublisherC5Ev]+0x22a): undefined reference to `four_wheel_steering_controller::Odometry::init(rclcpp::Time const&)'
+[4.862s] /usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o: in function `OdometryPublisher::timerCallback()':
+[4.862s] odometry.cpp:(.text._ZN17OdometryPublisher13timerCallbackEv[_ZN17OdometryPublisher13timerCallbackEv]+0xe4): undefined reference to `four_wheel_steering_controller::Odometry::update(double const&, double const&, double const&, double const&, double, double, rclcpp::Time const&)'
+[4.865s] /usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `OdomNode::OdomNode()':
+[4.866s] odometry_publish.cpp:(.text._ZN8OdomNodeC2Ev[_ZN8OdomNodeC5Ev]+0x184): undefined reference to `four_wheel_steering_controller::Odometry::Odometry(unsigned long)'
+[4.866s] /usr/bin/ld: odometry_publish.cpp:(.text._ZN8OdomNodeC2Ev[_ZN8OdomNodeC5Ev]+0x577): undefined reference to `four_wheel_steering_controller::Odometry::setWheelParams(double, double, double, double)'
+[4.866s] /usr/bin/ld: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o: in function `OdomNode::tick()':
+[4.866s] odometry_publish.cpp:(.text._ZN8OdomNode4tickEv[_ZN8OdomNode4tickEv]+0x163): undefined reference to `four_wheel_steering_controller::Odometry::update(double const&, double const&, double const&, double const&, double, double, rclcpp::Time const&)'
+[4.883s] collect2: error: ld returned 1 exit status
+[4.884s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:240: odometry_publisher_node] Error 1
+[4.885s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[4.885s] gmake: *** [Makefile:146: all] Error 2
+[4.887s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
