@@ -1,0 +1,25 @@
+[0.219s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/velocity_pub -- -j32 -l32
+[0.270s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/velocity_pub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/velocity_pub -- -j32 -l32
+[0.270s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/velocity_pub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/velocity_pub
+[0.277s] -- Install configuration: ""
+[0.277s] -- Execute custom install script
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub//scripts/robot_control.py
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub//launch/four_ws_control.launch.py
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/lib/velocity_pub/robot_control.py
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/lib/velocity_pub/four_ws_control.launch.py
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/ament_index/resource_index/package_run_dependencies/velocity_pub
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/ament_index/resource_index/parent_prefix_path/velocity_pub
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/environment/ament_prefix_path.sh
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/environment/ament_prefix_path.dsv
+[0.278s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/environment/path.sh
+[0.279s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/environment/path.dsv
+[0.279s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/local_setup.bash
+[0.279s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/local_setup.sh
+[0.279s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/local_setup.zsh
+[0.279s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/local_setup.dsv
+[0.279s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/package.dsv
+[0.286s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/ament_index/resource_index/packages/velocity_pub
+[0.286s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/cmake/velocity_pubConfig.cmake
+[0.286s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/cmake/velocity_pubConfig-version.cmake
+[0.286s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/velocity_pub/share/velocity_pub/package.xml
+[0.288s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/velocity_pub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/velocity_pub

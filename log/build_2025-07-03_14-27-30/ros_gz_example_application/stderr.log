@@ -1,0 +1,12 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:[m[K In member function ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(const double&, const double&, const double&, const double&, const double&, const double&, const double&, const double&, const rclcpp::Time&)[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:50:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kfront_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_steer[m[K’?
+   50 |   const double front_tmp = std::cos([01;31m[Kfront_steer[m[K) * (std::tan(front_steer) - std::tan(rear_steer)) / wheel_base_;
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+      |                                     [32m[Kfr_steer[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:50:86:[m[K [01;31m[Kerror: [m[K‘[01m[Krear_steer[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_steer[m[K’?
+   50 |   const double front_tmp = std::cos(front_steer) * (std::tan(front_steer) - std::tan([01;31m[Krear_steer[m[K)) / wheel_base_;
+      |                                                                                      [01;31m[K^~~~~~~~~~[m[K
+      |                                                                                      [32m[Krr_steer[m[K
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

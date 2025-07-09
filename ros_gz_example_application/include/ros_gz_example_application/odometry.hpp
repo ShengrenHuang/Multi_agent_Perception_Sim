@@ -82,8 +82,8 @@ namespace four_wheel_steering_controller
      * \param time      Current time
      * \return true if the odometry is actually updated
      */
-    bool update(const double& fl_speed, const double& fr_speed, const double& rl_speed, const double& rr_speed,
-                double front_steering, double rear_steering, const rclcpp::Time &time);
+    bool update(const double& fl_speed, const double& fr_speed, const double& rl_speed, const double& rr_speed, const double& fl_steer, const double& fr_steer,
+                const double& rl_steer, const double& rr_steer, const rclcpp::Time &time);
 
     /**
      * \brief heading getter

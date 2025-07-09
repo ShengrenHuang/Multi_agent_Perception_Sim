@@ -54,13 +54,18 @@
   ros_type_name: "sensor_msgs/msg/NavSatFix"
   gz_type_name: "gz.msgs.NavSat"
   direction: GZ_TO_ROS
-# - ros_topic_name: "/forward_velocity_controller/commands"
-#   gz_topic_name: "/model/fws_robot/joint_command"
-#   ros_type_name: "std_msgs/msg/Float64MultiArray"
-#   gz_type_name: "gz.msgs.Double_V"
-#   direction: ROS_TO_GZ
-# - ros_topic_name: "/forward_position_controller/commands"
-#   gz_topic_name: "/model/fws_robot/joint_position_cmd"
-#   ros_type_name: "std_msgs/msg/Float64MultiArray"
-#   gz_type_name: "gz.msgs.Double_V"
-#   direction: ROS_TO_GZ
+- ros_topic_name: "/forward_velocity_controller/commands"
+  gz_topic_name: "/model/fws_robot/joint_command"
+  ros_type_name: "std_msgs/msg/Float64MultiArray"
+  gz_type_name: "gz.msgs.Double_V"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/forward_position_controller/commands"
+  gz_topic_name: "/model/fws_robot/joint_position_cmd"
+  ros_type_name: "std_msgs/msg/Float64MultiArray"
+  gz_type_name: "gz.msgs.Double_V"
+  direction: ROS_TO_GZ
+- ros_topic_name: "/imu"
+  gz_topic_name: "/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS

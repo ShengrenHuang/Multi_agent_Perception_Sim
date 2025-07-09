@@ -1,0 +1,7 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In member function ‘[01m[Kvoid RobotNavController::[01;32m[KstopRobot[m[K()[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:55:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksteer_cmd[m[K’ was not declared in this scope
+   55 |         [01;31m[Ksteer_cmd[m[K.data = {0.0, 0.0, 0.0, 0.0};
+      |         [01;31m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

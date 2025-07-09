@@ -1,0 +1,26 @@
+[ 15%] Built target listener
+[ 30%] Built target UAV_pid_control_node
+[ 46%] Built target Robot_pid_control_node
+[ 61%] Built target talker
+[ 76%] Built target image_processor_node
+[ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:[m[K In member function ‘[01m[Kbool four_wheel_steering_controller::Odometry::[01;32m[Kupdate[m[K(const double&, const double&, const double&, const double&, double, double, const rclcpp::Time&)[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:59:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kfl_steer_[m[K’ was not declared in this scope; did you mean ‘[01m[Kfl_speed[m[K’?
+   59 |   const bool opp_steer_front = std::fabs([01;31m[Kfl_steer_[m[K + fr_steer_) < steer_threshold;
+      |                                          [01;31m[K^~~~~~~~~[m[K
+      |                                          [32m[Kfl_speed[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:59:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kfr_steer_[m[K’ was not declared in this scope; did you mean ‘[01m[Kfr_speed[m[K’?
+   59 |   const bool opp_steer_front = std::fabs(fl_steer_ + [01;31m[Kfr_steer_[m[K) < steer_threshold;
+      |                                                      [01;31m[K^~~~~~~~~[m[K
+      |                                                      [32m[Kfr_speed[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:60:42:[m[K [01;31m[Kerror: [m[K‘[01m[Krl_steer_[m[K’ was not declared in this scope; did you mean ‘[01m[Krl_speed[m[K’?
+   60 |   const bool opp_steer_rear  = std::fabs([01;31m[Krl_steer_[m[K + rr_steer_) < steer_threshold;
+      |                                          [01;31m[K^~~~~~~~~[m[K
+      |                                          [32m[Krl_speed[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry.cpp:60:54:[m[K [01;31m[Kerror: [m[K‘[01m[Krr_steer_[m[K’ was not declared in this scope; did you mean ‘[01m[Krr_speed[m[K’?
+   60 |   const bool opp_steer_rear  = std::fabs(rl_steer_ + [01;31m[Krr_steer_[m[K) < steer_threshold;
+      |                                                      [01;31m[K^~~~~~~~~[m[K
+      |                                                      [32m[Krr_speed[m[K
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:76: CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

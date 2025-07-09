@@ -1,0 +1,13 @@
+[ 30%] Built target UAV_pid_control_node
+[ 30%] Built target talker
+[ 46%] Built target listener
+[ 61%] Built target image_processor_node
+[ 69%] [32mBuilding CXX object CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o[0m
+[ 92%] Built target odometry_publisher_node
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/msg/imu.hpp: No such file or directory
+    5 | #include [01;31m[K"sensor_msgs/msg/imu.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

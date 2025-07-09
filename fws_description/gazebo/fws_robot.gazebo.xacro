@@ -50,6 +50,14 @@
           name="gz::sim::systems::NavSat">
       </plugin>
     </gazebo>
+
+    <gazebo>    
+      <plugin
+        filename="gz-sim-imu-system"
+        name="gz::sim::systems::Imu">
+      </plugin>
+    </gazebo>
+
   </xacro:macro>
     
 </robot>

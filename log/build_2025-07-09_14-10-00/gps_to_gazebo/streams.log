@@ -1,0 +1,17 @@
+[0.504s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/gps_to_gazebo': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cirl/ros_gz_project_template-main/build/gps_to_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cirl/ros_gz_project_template-main/build/gps_to_gazebo/build --no-deps symlink_data
+[0.648s] running develop
+[0.731s] running egg_info
+[0.739s] writing gps_to_gazebo.egg-info/PKG-INFO
+[0.740s] writing dependency_links to gps_to_gazebo.egg-info/dependency_links.txt
+[0.740s] writing entry points to gps_to_gazebo.egg-info/entry_points.txt
+[0.740s] writing requirements to gps_to_gazebo.egg-info/requires.txt
+[0.740s] writing top-level names to gps_to_gazebo.egg-info/top_level.txt
+[0.756s] reading manifest file 'gps_to_gazebo.egg-info/SOURCES.txt'
+[0.756s] writing manifest file 'gps_to_gazebo.egg-info/SOURCES.txt'
+[0.765s] running build_ext
+[0.765s] Creating /home/cirl/ros_gz_project_template-main/install/gps_to_gazebo/lib/python3.12/site-packages/gps-to-gazebo.egg-link (link to .)
+[0.765s] Installing gps_to_gazebo_node script to /home/cirl/ros_gz_project_template-main/install/gps_to_gazebo/lib/gps_to_gazebo
+[0.765s] 
+[0.765s] Installed /home/cirl/ros_gz_project_template-main/build/gps_to_gazebo
+[0.765s] running symlink_data
+[0.781s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/gps_to_gazebo' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/cirl/ros_gz_project_template-main/build/gps_to_gazebo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cirl/ros_gz_project_template-main/build/gps_to_gazebo/build --no-deps symlink_data

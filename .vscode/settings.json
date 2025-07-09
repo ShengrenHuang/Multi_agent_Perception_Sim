@@ -71,6 +71,9 @@
         "format": "cpp",
         "fstream": "cpp",
         "future": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "source_location": "cpp",
+        "valarray": "cpp",
+        "__nullptr": "cpp"
     }
 }

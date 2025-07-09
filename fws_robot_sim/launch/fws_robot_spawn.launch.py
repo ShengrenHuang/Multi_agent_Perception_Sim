@@ -79,8 +79,8 @@ def generate_launch_description():
         executable='create',
         output='screen',
         arguments=['-string', robot_desc,
-                   '-x', '10.0',
-                   '-y', '10.0',
+                   '-x', '0.0',
+                   '-y', '0.0',
                    '-z', '4.07',
                    '-R', '0.0',
                    '-P', '0.0',
@@ -196,8 +196,8 @@ def generate_launch_description():
         rviz,
         detection,
         gps_node,
-        odometry_publisher_node
-        # robot_pid_node
+        odometry_publisher_node,
+        robot_pid_node
         # UAV_pid,
         # uav_rl_node,
     ])

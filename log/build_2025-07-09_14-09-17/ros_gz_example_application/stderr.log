@@ -1,0 +1,13 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In member function ‘[01m[Kvoid RobotNavController::[01;32m[KimuCallback[m[K(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+   60 |         [01;31m[Ktf2[m[K::Quaternion q(
+      |         [01;31m[K^~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:66:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+   66 |         [01;31m[Ktf2[m[K::Matrix3x3(q).getRPY(roll, pitch, yaw);
+      |         [01;31m[K^~~[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:66:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+   66 |         tf2::Matrix3x3([01;31m[Kq[m[K).getRPY(roll, pitch, yaw);
+      |                        [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

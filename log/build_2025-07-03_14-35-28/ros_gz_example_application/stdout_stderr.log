@@ -1,0 +1,14 @@
+[ 15%] Built target Robot_pid_control_node
+[ 30%] Built target image_processor_node
+[ 46%] Built target talker
+[ 76%] Built target listener
+[ 76%] Built target UAV_pid_control_node
+[ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[ 92%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In member function ‘[01m[Kvoid OdometryPublisher::[01;32m[KtimerCallback[m[K()[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:121:10:[m[K [01;31m[Kerror: [m[K‘[01m[KMatrix3x3[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+  121 |     tf2::[01;31m[KMatrix3x3[m[K(q).getRPY(roll, pitch, yaw);
+      |          [01;31m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

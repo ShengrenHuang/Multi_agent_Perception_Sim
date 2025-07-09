@@ -4,6 +4,7 @@
 #include <geometry_msgs/msg/transform_stamped.hpp>
 #include <tf2_ros/transform_broadcaster.h>
 #include <tf2/LinearMath/Quaternion.h>
+#include <tf2/LinearMath/Matrix3x3.h>
 #include "ros_gz_example_application/odometry.hpp"
 #include <std_msgs/msg/float64_multi_array.hpp>
 
@@ -97,7 +98,7 @@ private:
     const double rear_steer  = 0.5 * (rl_steer_ + rr_steer_);
 
     rclcpp::Time now = this->now();
-    bool updated = odom_.update(fl_speed_, fr_speed_, rl_speed_, rr_speed_, front_steer, rear_steer, now);
+    bool updated = odom_.update(fl_speed_, fr_speed_, rl_speed_, rr_speed_, fl_steer_, fr_steer_, rl_steer_, rr_steer_, now);
     if (!updated) return;
 
     nav_msgs::msg::Odometry msg;
@@ -115,6 +116,13 @@ private:
     msg.pose.pose.orientation.y = q.y();
     msg.pose.pose.orientation.z = q.z();
     msg.pose.pose.orientation.w = q.w();
+
+    // Convert quaternion to Euler
+    // double roll, pitch, yaw;
+    // tf2::Matrix3x3(q).getRPY(roll, pitch, yaw);
+    // RCLCPP_INFO(this->get_logger(), "Euler [deg] -> Roll: %.2f, Pitch: %.2f, Yaw: %.2f",
+    //             roll * 180.0 / M_PI, pitch * 180.0 / M_PI, yaw * 180.0 / M_PI);
+
 
     msg.twist.twist.linear.x  = odom_.getLinearX();
     msg.twist.twist.linear.y  = odom_.getLinearY();

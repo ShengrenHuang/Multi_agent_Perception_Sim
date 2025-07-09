@@ -71,6 +71,34 @@
     </gazebo>
 
 
+    <!-- IMU Link -->
+    <link name="imu_link">
+      <inertial>
+        <origin xyz="0 0 0"/>
+        <mass value="0.01"/>
+        <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+      </inertial>
+    </link>
+
+      <!-- Joint to attach IMU to base -->
+    <joint name="imu_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="imu_link"/>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Gazebo plugin for IMU -->
+    <gazebo reference="imu_link">
+      <sensor name="imu" type="imu">
+          <always_on>1</always_on>
+          <update_rate>100</update_rate>
+          <visualize>true</visualize>
+          <topic>imu</topic>
+          <enable_metrics>true</enable_metrics>
+      </sensor>
+    </gazebo>
+
+
   </xacro:macro>
   
 </robot>

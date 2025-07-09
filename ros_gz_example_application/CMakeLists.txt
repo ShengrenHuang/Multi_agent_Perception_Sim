@@ -47,6 +47,7 @@ ament_target_dependencies(Robot_pid_control_node
   std_msgs
   tf2
   tf2_geometry_msgs
+  sensor_msgs
 )
 
 add_executable(odometry_publisher_node

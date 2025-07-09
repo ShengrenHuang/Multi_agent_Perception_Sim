@@ -1,6 +1,7 @@
 #include "ros_gz_example_application/odometry.hpp"
 #include <cmath>          // std::sin, std::cos, std::atan2, std::hypot, std::copysign
 #include <tf2/utils.h>    // 若日後要操作 quaternion，可保留
+#include "rclcpp/rclcpp.hpp"
 
 namespace four_wheel_steering_controller
 {
@@ -41,9 +42,14 @@ void Odometry::init(const rclcpp::Time & now)
  * ===============================*/
 bool Odometry::update(const double& fl_speed, const double& fr_speed,
                       const double& rl_speed, const double& rr_speed,
-                      double front_steer, double rear_steer,
+                      const double& fl_steer, const double& fr_steer,
+                      const double& rl_steer, const double& rr_steer,
                       const rclcpp::Time& now)
 {
+
+  const double front_steer = 0.5 * (fl_steer + fr_steer);
+  const double rear_steer  = 0.5 * (rl_steer + rr_steer);
+
   /* ----- 幾何計算 (四輪轉向) ------------------------- */
   const double front_tmp = std::cos(front_steer) * (std::tan(front_steer) - std::tan(rear_steer)) / wheel_base_;
   const double rear_tmp  = std::cos(rear_steer ) * (std::tan(front_steer) - std::tan(rear_steer)) / wheel_base_;
@@ -52,12 +58,19 @@ bool Odometry::update(const double& fl_speed, const double& fr_speed,
   const double front_lin = wheel_radius_ * 0.5 * (fl_speed + fr_speed);
   const double rear_lin  = wheel_radius_ * 0.5 * (rl_speed + rr_speed);
 
+
+
   /* ----- 判斷是否為 pivot turn（前後輪近似 ±90°） --- */
   bool pivot_turn = false;
-  if (std::fabs(std::fabs(front_steer) - M_PI_2) < 0.003 &&
-      std::fabs(std::fabs(rear_steer ) - M_PI_2) < 0.003)
+
+  const double steer_threshold = 0.1;
+  const bool opp_steer_front = std::fabs(fl_steer + fr_steer) < steer_threshold;
+  const bool opp_steer_rear  = std::fabs(rl_steer + rr_steer) < steer_threshold;
+
+  if (opp_steer_front && opp_steer_rear)
   {
     pivot_turn = true;
+    // RCLCPP_INFO(rclcpp::get_logger("odom"), "Pivot turn detected!");
     // 以前左輪速度估算原地角速度 (任選一輪皆可)
     const double R = std::sqrt(std::pow(wheel_base_/2.0, 2) + std::pow(steering_track_/2.0, 2)) + wheel_steering_y_offset_;
     angular_   = - wheel_radius_ * fl_speed / R;  // rad/s

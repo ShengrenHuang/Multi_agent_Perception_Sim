@@ -1,0 +1,16 @@
+[0.112s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.217s] [ 15%] Built target Robot_pid_control_node
+[0.218s] [ 30%] Built target image_processor_node
+[0.218s] [ 46%] Built target talker
+[0.218s] [ 76%] Built target listener
+[0.218s] [ 76%] Built target UAV_pid_control_node
+[0.218s] [ 84%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry.cpp.o[0m
+[0.218s] [ 92%] [32mBuilding CXX object CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o[0m
+[1.886s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:[m[K In member function ‘[01m[Kvoid OdometryPublisher::[01;32m[KtimerCallback[m[K()[m[K’:
+[1.886s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/odometry_publish.cpp:121:10:[m[K [01;31m[Kerror: [m[K‘[01m[KMatrix3x3[m[K’ is not a member of ‘[01m[Ktf2[m[K’
+[1.886s]   121 |     tf2::[01;31m[KMatrix3x3[m[K(q).getRPY(roll, pitch, yaw);
+[1.886s]       |          [01;31m[K^~~~~~~~~[m[K
+[2.834s] gmake[2]: *** [CMakeFiles/odometry_publisher_node.dir/build.make:90: CMakeFiles/odometry_publisher_node.dir/src/odometry_publish.cpp.o] Error 1
+[2.834s] gmake[1]: *** [CMakeFiles/Makefile2:277: CMakeFiles/odometry_publisher_node.dir/all] Error 2
+[2.834s] gmake: *** [Makefile:146: all] Error 2
+[2.836s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

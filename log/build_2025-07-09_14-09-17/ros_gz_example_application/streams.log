@@ -1,0 +1,42 @@
+[0.117s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.223s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.251s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.258s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.278s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.284s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.292s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.301s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.339s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.341s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.382s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.422s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.434s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[0.459s] -- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)
+[0.468s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.484s] -- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)
+[0.486s] -- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.489s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.490s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.609s] -- Configuring done (0.5s)
+[0.629s] -- Generating done (0.0s)
+[0.634s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[0.666s] [  7%] [32mBuilding CXX object CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o[0m
+[0.668s] [ 38%] Built target talker
+[0.668s] [ 38%] Built target listener
+[0.668s] [ 53%] Built target UAV_pid_control_node
+[0.668s] [ 69%] Built target image_processor_node
+[0.680s] [ 92%] Built target odometry_publisher_node
+[1.619s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In member function ‘[01m[Kvoid RobotNavController::[01;32m[KimuCallback[m[K(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.619s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:60:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+[1.619s]    60 |         [01;31m[Ktf2[m[K::Quaternion q(
+[1.619s]       |         [01;31m[K^~~[m[K
+[1.619s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:66:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf2[m[K’ has not been declared
+[1.619s]    66 |         [01;31m[Ktf2[m[K::Matrix3x3(q).getRPY(roll, pitch, yaw);
+[1.619s]       |         [01;31m[K^~~[m[K
+[1.622s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:66:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kq[m[K’ was not declared in this scope
+[1.622s]    66 |         tf2::Matrix3x3([01;31m[Kq[m[K).getRPY(roll, pitch, yaw);
+[1.622s]       |                        [01;31m[K^[m[K
+[2.907s] gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+[2.907s] gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+[2.908s] gmake: *** [Makefile:146: all] Error 2
+[2.909s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
