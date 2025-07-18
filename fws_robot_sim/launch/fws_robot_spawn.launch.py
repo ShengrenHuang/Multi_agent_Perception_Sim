@@ -89,6 +89,7 @@ def generate_launch_description():
                    '-allow_renaming', 'false'],
     )
 
+
     load_joint_state_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
              'joint_state_broadcaster'],
@@ -173,6 +174,14 @@ def generate_launch_description():
         output='screen'
     )
 
+    uav_rl_node = Node(
+        package='ros_rl',
+        executable='uav_rl_env',
+        name='uav_gym_node',
+        output='screen'
+    )
+
+
     return LaunchDescription([
         RegisterEventHandler(
             event_handler=OnProcessExit(
@@ -197,7 +206,7 @@ def generate_launch_description():
         detection,
         gps_node,
         odometry_publisher_node,
-        robot_pid_node
-        # UAV_pid,
-        # uav_rl_node,
+        robot_pid_node,
+        UAV_pid,
+        # uav_rl_node
     ])

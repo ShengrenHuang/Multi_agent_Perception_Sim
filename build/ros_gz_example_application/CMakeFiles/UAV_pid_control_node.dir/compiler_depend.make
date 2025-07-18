@@ -16,8 +16,14 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__type_support.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__builder.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__type_support.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
@@ -30,6 +36,8 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_array.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp \
@@ -416,12 +424,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
   /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp \
   /opt/ros/jazzy/include/tracetools/tracetools/config.h \
   /opt/ros/jazzy/include/tracetools/tracetools/tracetools.h \
   /opt/ros/jazzy/include/tracetools/tracetools/utils.hpp \
@@ -1031,8 +1033,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/ios:
 
-/usr/include/c++/13/iomanip:
-
 /usr/include/c++/13/future:
 
 /usr/include/c++/13/functional:
@@ -1103,7 +1103,7 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/bits/string_view.tcc:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
+/usr/include/c++/13/bits/streambuf.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
@@ -1121,15 +1121,13 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_payload.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_parameters_interface.hpp:
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/parser.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_options.hpp:
 
 /usr/include/c++/13/streambuf:
 
@@ -1157,12 +1155,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/bits/stl_deque.h:
 
-/usr/include/c++/13/codecvt:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_client.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
 
 /usr/include/c++/13/bits/istream.tcc:
@@ -1181,11 +1173,15 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__type_support.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/macros.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_setting.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/function_traits.hpp:
 
@@ -1237,6 +1233,8 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
+/opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
 
 /usr/include/c++/13/bits/stl_queue.h:
@@ -1245,9 +1243,7 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/resolve_intra_process_buffer_type.hpp:
 
-/usr/include/pthread.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/simple_events_queue.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
 
@@ -1311,14 +1307,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
-/usr/include/c++/13/bits/locale_conv.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
-
-/opt/ros/jazzy/include/rcutils/rcutils/types/array_list.h:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameter_types.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/qos_policy_kind.h:
@@ -1343,15 +1331,33 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/cpp_callback_trampoline.hpp:
 
-/opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
+/usr/include/c++/13/tr1/gamma.tcc:
 
-/opt/ros/jazzy/include/rcl/rcl/graph.h:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__type_support.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
-/usr/include/c++/13/bits/ostream.tcc:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
-/opt/ros/jazzy/include/rcl/rcl/domain_id.h:
+/opt/ros/jazzy/include/rcl/rcl/node_options.h:
+
+/opt/ros/jazzy/include/rcpputils/rcpputils/visibility_control.hpp:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__type_support.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/generic_subscription.hpp:
+
+/usr/include/c++/13/bits/unordered_map.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/any_service_callback.hpp:
+
+/opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/arguments.h:
 
@@ -1360,6 +1366,8 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_qos.h:
 
 /usr/include/c++/13/bits/stl_iterator.h:
+
+/opt/ros/jazzy/include/rcl/rcl/domain_id.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -1375,38 +1383,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/bits/concept_check.h:
 
-/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/odometry__traits.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/wait.h:
-
-/usr/include/c++/13/tr1/gamma.tcc:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__type_support.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
-
-/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/odometry__builder.hpp:
-
-/usr/include/c++/13/bits/std_thread.h:
-
-/opt/ros/jazzy/include/rcl/rcl/event.h:
-
-/usr/include/c++/13/bits/shared_ptr_atomic.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_info.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
@@ -1414,16 +1390,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/subscription_callback_type_helper.hpp:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
-
-/opt/ros/jazzy/include/rcpputils/rcpputils/scope_exit.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/events_executor_event_types.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/init_options.hpp:
 
@@ -1437,11 +1403,53 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/odometry__traits.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter.hpp:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
+
+/opt/ros/jazzy/include/rcl/rcl/wait.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/odometry__builder.hpp:
+
+/usr/include/c++/13/bits/std_thread.h:
+
+/opt/ros/jazzy/include/rcl/rcl/event.h:
+
+/usr/include/c++/13/bits/shared_ptr_atomic.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:
+
 /opt/ros/jazzy/include/rcl/rcl/context.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
 
@@ -1453,19 +1461,17 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/generic_client.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process_buffer.hpp:
+/usr/include/c++/13/initializer_list:
 
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/liveliness_changed.h:
+/opt/ros/jazzy/include/rcutils/rcutils/testing/fault_injection.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
+/usr/include/c++/13/bits/specfun.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
 
@@ -1473,11 +1479,21 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp:
 
-/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__type_support.hpp:
+
+/usr/include/c++/13/iomanip:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/types.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
@@ -1491,7 +1507,23 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose_array.hpp:
+
+/usr/include/c++/13/bits/std_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -1499,15 +1531,11 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface_traits.hpp:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
 
-/opt/ros/jazzy/include/rcl/rcl/log_level.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
-
-/usr/include/c++/13/bits/cxxabi_forced.h:
+/usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/cstddef:
 
@@ -1521,13 +1549,11 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/shared_library.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
-/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__traits.hpp:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/type_adapter.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
@@ -1545,25 +1571,29 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcl/rcl/visibility_control.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
+
+/opt/ros/jazzy/include/rcutils/rcutils/types/array_list.h:
+
+/opt/ros/jazzy/include/rcpputils/rcpputils/scope_exit.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/events_executor_event_types.hpp:
+
 /usr/include/c++/13/pstl/execution_defs.h:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__type_support.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__type_support.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/generic_client.hpp:
-
-/usr/include/c++/13/initializer_list:
-
-/opt/ros/jazzy/include/rcutils/rcutils/testing/fault_injection.h:
-
-/usr/include/c++/13/bits/specfun.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
 
 /usr/include/c++/13/cctype:
 
@@ -1573,9 +1603,9 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/rate.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message.hpp:
+/usr/include/c++/13/bits/requires_hosted.h:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp:
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp:
 
 /usr/include/c++/13/unordered_set:
 
@@ -1583,17 +1613,37 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp:
 
-/usr/include/c++/13/bits/requires_hosted.h:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp:
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/graph.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
+
+/usr/include/pthread.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/simple_events_queue.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_array__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface_traits.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/log_level.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
+
+/usr/include/c++/13/bits/cxxabi_forced.h:
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/thread_safety_annotations.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process_base.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/impl/config.h:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
 
 /usr/include/c++/13/bits/ios_base.h:
 
@@ -1623,12 +1673,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/bits/stl_set.h:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
-
-/usr/include/c++/13/bits/range_access.h:
-
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/service_introspection.h:
@@ -1645,25 +1689,9 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcl/rcl/timer.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/types.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/node_options.h:
-
-/opt/ros/jazzy/include/rcpputils/rcpputils/visibility_control.hpp:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__type_support.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
 
@@ -1679,10 +1707,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp:
@@ -1694,6 +1718,38 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message_type.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/visibility_control.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
+
+/usr/include/c++/13/iostream:
+
+/usr/include/asm-generic/errno.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:
+
+/opt/ros/jazzy/include/rcl/rcl/macros.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/clock.hpp:
+
+/opt/ros/jazzy/include/rcutils/rcutils/types.h:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
 
@@ -1739,12 +1795,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node.hpp:
 
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/type_adapter.hpp:
-
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
@@ -1755,55 +1805,29 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_type.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
+
+/usr/include/c++/13/codecvt:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_client.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_options.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
 /usr/include/c++/13/bits/allocator.h:
 
-/usr/include/c++/13/bits/unordered_map.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_map.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/buffer_implementation_base.hpp:
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/any_service_callback.hpp:
-
-/opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/generic_subscription.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__type_support.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/visibility_control.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:
-
-/opt/ros/jazzy/include/rcl/rcl/macros.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/clock.hpp:
-
-/opt/ros/jazzy/include/rcutils/rcutils/types.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
-
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
-
-/usr/include/c++/13/iostream:
-
-/usr/include/asm-generic/errno.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_value.hpp:
 
@@ -1813,9 +1837,9 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
 
-/usr/include/c++/13/bits/predefined_ops.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:
+
+/usr/include/c++/13/bits/predefined_ops.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/qos.hpp:
 
@@ -1983,8 +2007,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
-
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/events_statuses.h:
 
 /opt/ros/jazzy/include/rmw/rmw/serialized_message.h:
@@ -2012,8 +2034,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/executor_entities_collector.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/impl/cpp/demangle.hpp:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/init.h:
 
@@ -2066,12 +2086,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /usr/include/c++/13/cstdio:
 
 /opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info_array.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_traits.hpp:
 
@@ -2190,8 +2204,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics_state.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
-
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
 
 /opt/ros/jazzy/include/tracetools/tracetools/config.h:
 
@@ -2329,8 +2341,6 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 
 /usr/include/c++/13/bits/shared_ptr_base.h:
 
-/usr/include/c++/13/bits/std_mutex.h:
-
 /usr/include/c++/13/bits/stl_algo.h:
 
 /usr/include/c++/13/bits/stl_function.h:
@@ -2356,7 +2366,3 @@ CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o: /home/cirl/ros_gz_
 /usr/include/c++/13/bits/stl_vector.h:
 
 /usr/include/c++/13/bits/stream_iterator.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:

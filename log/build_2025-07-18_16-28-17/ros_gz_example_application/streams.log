@@ -1,0 +1,88 @@
+[0.118s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.221s] [ 15%] Built target listener
+[0.222s] [ 46%] Built target image_processor_node
+[0.222s] [ 46%] Built target talker
+[0.222s] [ 61%] Built target UAV_pid_control_node
+[0.222s] [ 69%] [32mBuilding CXX object CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o[0m
+[0.222s] [ 92%] Built target odometry_publisher_node
+[1.174s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In constructor ‘[01m[KRobotNavController::[01;32m[KRobotNavController[m[K()[m[K’:
+[1.174s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:35:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kpair[m[K’ does not name a type
+[1.174s]    35 |         typedef [01;31m[Kpair[m[K<int, int> State;
+[1.174s]       |                 [01;31m[K^~~~[m[K
+[1.175s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:36:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type
+[1.175s]    36 |         typedef [01;31m[Kvector[m[K<State> Neighbors;
+[1.175s]       |                 [01;31m[K^~~~~~[m[K
+[1.175s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:38:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ was not declared in this scope
+[1.175s]    38 |         [01;31m[Kmap[m[K<State, Neighbors> grid_map;
+[1.175s]       |         [01;31m[K^~~[m[K
+[1.176s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:38:9:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.176s] In file included from [01m[K/usr/include/c++/13/map:63[m[K,
+[1.176s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[1.176s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.176s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.176s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[1.176s]                  from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:3[m[K:
+[1.176s] [01m[K/usr/include/c++/13/bits/stl_map.h:102:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::map[m[K’
+[1.176s]   102 |     class [01;36m[Kmap[m[K
+[1.176s]       |           [01;36m[K^~~[m[K
+[1.176s] [01m[K/usr/include/c++/13/map:80:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::map[m[K’
+[1.176s]    80 |       using [01;36m[Kmap[m[K
+[1.176s]       |             [01;36m[K^~~[m[K
+[1.178s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:38:13:[m[K [01;31m[Kerror: [m[K‘[01m[KState[m[K’ was not declared in this scope; did you mean ‘[01m[K_xstate[m[K’?
+[1.179s]    38 |         map<[01;31m[KState[m[K, Neighbors> grid_map;
+[1.179s]       |             [01;31m[K^~~~~[m[K
+[1.179s]       |             [32m[K_xstate[m[K
+[1.182s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:38:20:[m[K [01;31m[Kerror: [m[K‘[01m[KNeighbors[m[K’ was not declared in this scope
+[1.182s]    38 |         map<State, [01;31m[KNeighbors[m[K> grid_map;
+[1.182s]       |                    [01;31m[K^~~~~~~~~[m[K
+[1.185s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:38:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrid_map[m[K’ was not declared in this scope
+[1.185s]    38 |         map<State, Neighbors> [01;31m[Kgrid_map[m[K;
+[1.185s]       |                               [01;31m[K^~~~~~~~[m[K
+[1.185s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:43:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[1.185s]    43 |         [01;31m[Kvector[m[K<State> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+[1.185s]       |         [01;31m[K^~~~~~[m[K
+[1.185s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:43:9:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[1.185s] In file included from [01m[K/usr/include/c++/13/vector:66[m[K,
+[1.185s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19[m[K,
+[1.185s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K:
+[1.185s] [01m[K/usr/include/c++/13/bits/stl_vector.h:428:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+[1.185s]   428 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+[1.186s]       |           [01;36m[K^~~~~~[m[K
+[1.186s] [01m[K/usr/include/c++/13/vector:86:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::vector[m[K’
+[1.186s]    86 |       using [01;36m[Kvector[m[K = std::vector<_Tp, polymorphic_allocator<_Tp>>;
+[1.186s]       |             [01;36m[K^~~~~~[m[K
+[1.188s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:43:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kdirections[m[K’ was not declared in this scope
+[1.188s]    43 |         vector<State> [01;31m[Kdirections[m[K = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+[1.188s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[1.188s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:47:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kcurrent[m[K’
+[1.188s]    47 |                 State [01;31m[Kcurrent[m[K = {x, y};
+[1.188s]       |                       [01;31m[K^~~~~~~[m[K
+[1.188s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:48:27:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kneighbors[m[K’
+[1.188s]    48 |                 Neighbors [01;31m[Kneighbors[m[K;
+[1.189s]       |                           [01;31m[K^~~~~~~~~[m[K
+[1.191s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:55:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kneighbors[m[K’ was not declared in this scope
+[1.192s]    55 |                         [01;31m[Kneighbors[m[K.emplace_back(nx, ny);
+[1.192s]       |                         [01;31m[K^~~~~~~~~[m[K
+[1.194s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:59:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent[m[K’ was not declared in this scope
+[1.194s]    59 |                 grid_map[[01;31m[Kcurrent[m[K] = neighbors;
+[1.194s]       |                          [01;31m[K^~~~~~~[m[K
+[1.198s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:59:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kneighbors[m[K’ was not declared in this scope
+[1.198s]    59 |                 grid_map[current] = [01;31m[Kneighbors[m[K;
+[1.198s]       |                                     [01;31m[K^~~~~~~~~[m[K
+[1.204s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:[m[K In member function ‘[01m[Kvoid RobotNavController::[01;32m[KodomCallback[m[K(nav_msgs::msg::Odometry_<std::allocator<void> >::SharedPtr)[m[K’:
+[1.204s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:141:52:[m[K [01;31m[Kerror: [m[K‘[01m[Krows[m[K’ was not declared in this scope
+[1.204s]   141 |         auto grid_pos = continuousToGridCell(x, y, [01;31m[Krows[m[K, cols);
+[1.204s]       |                                                    [01;31m[K^~~~[m[K
+[1.206s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:141:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kcols[m[K’ was not declared in this scope; did you mean ‘[01m[Kcosl[m[K’?
+[1.206s]   141 |         auto grid_pos = continuousToGridCell(x, y, rows, [01;31m[Kcols[m[K);
+[1.206s]       |                                                          [01;31m[K^~~~[m[K
+[1.207s]       |                                                          [32m[Kcosl[m[K
+[1.209s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[1.210s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K:
+[1.210s] [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/Robot_navigation.cpp:142:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrid_map[m[K’ was not declared in this scope
+[1.210s]   142 |         RCLCPP_INFO(this->get_logger(), "Current location: (%.2f, %.2f). The adjacent cells: %s", x, y, [01;31m[Kgrid_map[m[K[{x, y}].c_str());
+[1.210s]       |                                                                                                         [01;31m[K^~~~~~~~[m[K
+[2.522s] gmake[2]: *** [CMakeFiles/Robot_pid_control_node.dir/build.make:76: CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o] Error 1
+[2.522s] gmake[1]: *** [CMakeFiles/Makefile2:251: CMakeFiles/Robot_pid_control_node.dir/all] Error 2
+[2.522s] gmake: *** [Makefile:146: all] Error 2
+[2.524s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32

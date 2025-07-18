@@ -6,8 +6,20 @@
 #include "std_msgs/msg/float64_multi_array.hpp"
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Matrix3x3.h>
+#include <map>
+#include <vector>
+#include <utility>  // already included but OK to keep
+#include <string>   // for to_string
+#include "geometry_msgs/msg/pose_array.hpp"
+#include "geometry_msgs/msg/pose.hpp"
 
 class RobotNavController : public rclcpp::Node {
+    using State = std::pair<int, int>;
+    using Neighbors = std::vector<State>;
+
+    std::map<State, Neighbors> grid_map_;
+    int rows_ = 10;
+    int cols_ = 10;
 public:
     RobotNavController() : Node("robot_nav_controller"), initialized_(false) {
         odom_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
@@ -25,22 +37,46 @@ public:
         steer_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
             "/forward_position_controller/commands", 10);
 
+        grid_pub_ = this->create_publisher<geometry_msgs::msg::PoseArray>("/robot/adjacent_cells", 10);
+
         waypoints_ = {
             {5.0f, 5.0f},
             {5.0f, 0.0f},
-            {-5.0f, 0.0f},
+            {10.0f, 6.0f},
             {0.0f, 0.0f}
         };
+
+
+        std::vector<State> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+        for (int x = 0; x < rows_; ++x) {
+            for (int y = 0; y < cols_; ++y) {
+                State current = {x, y};
+                Neighbors neighbors;
+
+                for (const auto& d : directions) {
+                    int nx = x + d.first;
+                    int ny = y + d.second;
+
+                    if (nx >= 0 && nx < rows_ && ny >= 0 && ny < cols_) {
+                        neighbors.emplace_back(nx, ny);
+                    }
+                }
+
+                grid_map_[current] = neighbors;
+            }
+        }
+
 
         RCLCPP_INFO(this->get_logger(), "Robot Navigation Controller started.");
     }
 
 private:
-    float ref_x = 5.0;
-    float ref_y = 5.0;
+    // float ref_x = 5.0;
+    // float ref_y = 5.0;
     float tolerance = 0.3;
     float max_steering = M_PI / 4;
-    float max_speed = 20.0;
+    float max_speed = 50.0;
 
     bool initialized_;
     bool imu_received_;
@@ -54,6 +90,29 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr    imu_sub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr wheel_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr steer_pub_;
+    rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr grid_pub_;
+
+    std::string formatNeighbors(const Neighbors& neighbors) {
+        std::string result = "[";
+        for (size_t i = 0; i < neighbors.size(); ++i) {
+            result += "(" + std::to_string(neighbors[i].first) + "," + std::to_string(neighbors[i].second) + ")";
+            if (i != neighbors.size() - 1) result += ", ";
+        }
+        result += "]";
+        return result;
+    }
+
+    std::pair<int, int> continuousToGridCell(float x, float y, int grid_width, int grid_height) {
+        int grid_x = static_cast<int>(std::floor(x));
+        int grid_y = static_cast<int>(std::floor(y));
+
+        // Clamp to grid bounds
+        grid_x = std::max(0, std::min(grid_x, grid_width - 1));
+        grid_y = std::max(0, std::min(grid_y, grid_height - 1));
+
+        return {grid_x, grid_y};
+    }
+
 
     float saturate(float value, float limit) {
         return std::max(std::min(value, limit), -limit);
@@ -96,15 +155,34 @@ private:
         float x = pos.x;
         float y = pos.y;
 
+        auto grid_pos = continuousToGridCell(x, y, rows_, cols_);
+        const auto& neighbors = grid_map_[grid_pos];
+
+        geometry_msgs::msg::PoseArray pose_array;
+        pose_array.header.stamp = this->get_clock()->now();
+        pose_array.header.frame_id = "map";  // Or your world frame
+
+        for (const auto& n : neighbors) {
+            geometry_msgs::msg::Pose pose;
+            pose.position.x = static_cast<double>(n.first);
+            pose.position.y = static_cast<double>(n.second);
+            pose.position.z = 0.0;  // flat 2D grid
+            pose.orientation.w = 1.0;  // neutral rotation
+            pose_array.poses.push_back(pose);
+        }
+
+        grid_pub_->publish(pose_array);
+
+
         float dx_goal = ref_x - x;
         float dy_goal = ref_y - y;
         float distance = std::hypot(dx_goal, dy_goal);
 
-        RCLCPP_INFO(this->get_logger(),
-                "Current (%.2f, %.2f) Dist=%.2f", x, y, distance);
+        // RCLCPP_INFO(this->get_logger(),
+        //         "Current (%.2f, %.2f) Dist=%.2f", x, y, distance);
 
         if (distance < tolerance) {
-            RCLCPP_INFO(this->get_logger(), "Waypoint %zu reached.", wp_index_);
+            // RCLCPP_INFO(this->get_logger(), "Waypoint %zu reached.", wp_index_);
             wp_index_++;
             return;
         }
@@ -172,17 +250,17 @@ private:
         std_msgs::msg::Float64MultiArray steer_cmd;
         steer_cmd.data = {steering, steering, steering, steering};
         steer_pub_->publish(steer_cmd);
-        RCLCPP_INFO(this->get_logger(), "Steering angle: %.2f", steering);
+        // RCLCPP_INFO(this->get_logger(), "Steering angle: %.2f", steering);
 
         // Calculate speed with direction
         float direction = std::cos(yaw_error);  // < 0 means backwards
-        float speed = saturate(distance * 5.0, max_speed) * direction;
+        float speed = saturate(distance * 20.0, max_speed) * direction;
         std_msgs::msg::Float64MultiArray vel_cmd;
         vel_cmd.data = {speed, speed, speed, speed};
         wheel_pub_->publish(vel_cmd);
 
-        RCLCPP_INFO(this->get_logger(), "Moving %s with speed %.2f",
-                    direction < 0 ? "backward" : "forward", speed);
+        // RCLCPP_INFO(this->get_logger(), "Moving %s with speed %.2f",
+        //             direction < 0 ? "backward" : "forward", speed);
     }
 };
 

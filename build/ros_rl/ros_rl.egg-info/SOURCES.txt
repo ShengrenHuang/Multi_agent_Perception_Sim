@@ -2,6 +2,7 @@ package.xml
 setup.cfg
 setup.py
 resource/ros_rl
+ros_rl/RL_vec_test.py
 ros_rl/UAV_RL_pipeline.py
 ros_rl/__init__.py
 ros_rl/test.py

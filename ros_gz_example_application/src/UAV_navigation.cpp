@@ -1,71 +1,173 @@
 #include <iostream>
+#include <cmath>
 #include "rclcpp/rclcpp.hpp"
 #include "nav_msgs/msg/odometry.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "geometry_msgs/msg/twist.hpp"
+#include <map>
+#include <vector>
+#include <utility>  // already included but OK to keep
+#include <string>   // for to_string
+#include "geometry_msgs/msg/pose_array.hpp"
+#include "geometry_msgs/msg/pose.hpp"
 
 
-// Reference signal (Position)
-float ref_x = 30;
-float ref_y = 30;
-float max_amp = 1;
+class UAV_Nav_Publisher : public rclcpp::Node {
+    using State = std::pair<int, int>;
+    using Neighbors = std::vector<State>;
 
+    std::map<State, Neighbors> grid_map_;
+    int rows_ = 10;
+    int cols_ = 10;
+public:
+    UAV_Nav_Publisher() : Node("UAV_PID_Control"), wp_index_(0) {
+        subscriber_ = this->create_subscription<nav_msgs::msg::Odometry>(
+            "/x3/odometry", 10,
+            std::bind(&UAV_Nav_Publisher::PosCallback, this, std::placeholders::_1));
 
-class UAV_Nav_Publisher : public rclcpp::Node{
-    public:
-        UAV_Nav_Publisher(): Node("UAV_PID_Control"){
-            subscriber_ = this->create_subscription<nav_msgs::msg::Odometry>(
-                "/x3/odometry",
-                10,
-                std::bind(&UAV_Nav_Publisher::PosCallback, this, std::placeholders::_1)
-            );
-            publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/x3/cmd_vel", 10);
-            RCLCPP_INFO(this->get_logger(), "UAV_PID_Control node started");
-        }
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/x3/cmd_vel", 10);
 
-    private:
-        float sat_func(float amp){
-            float result = 0;
-            if(abs(amp)>=max_amp){
-                result = (abs(amp)/amp)*max_amp;
-            }else{
-                result = amp;
+        grid_pub_ = this->create_publisher<geometry_msgs::msg::PoseArray>("/uav/adjacent_cells", 10);
+        // Define waypoints
+        waypoints_ = {
+            {5.0f, 5.0f},
+            {5.0f, 0.0f},
+            {10.0f, 6.0f},
+            {0.0f, 0.0f}
+        };
+
+        std::vector<State> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+        for (int x = 0; x < rows_; ++x) {
+            for (int y = 0; y < cols_; ++y) {
+                State current = {x, y};
+                Neighbors neighbors;
+
+                for (const auto& d : directions) {
+                    int nx = x + d.first;
+                    int ny = y + d.second;
+
+                    if (nx >= 0 && nx < rows_ && ny >= 0 && ny < cols_) {
+                        neighbors.emplace_back(nx, ny);
+                    }
+                }
+
+                grid_map_[current] = neighbors;
             }
-            return result;
-        }
-        void UAV_PID_Control(float x, float y){
-            float error_x =  ref_x - x;
-            float error_y =  ref_y - y;
-
-            RCLCPP_INFO(this->get_logger(), "Error -> x: %0.3f, y: %0.3f", error_x, error_y);
-            float k_p = 1;
-            float vx = k_p*error_x;
-            float vy = k_p*error_y;
-            vx = sat_func(vx);
-            vy = sat_func(vy);
-
-            geometry_msgs::msg::Twist msg;
-            msg.linear.x = vx;
-            msg.linear.y = vy;
-            msg.linear.z = 0.0;
-            msg.angular.z = 0.0;
-            publisher_->publish(msg);
         }
 
-        void PosCallback(const nav_msgs::msg::Odometry::SharedPtr msg){
-            RCLCPP_INFO(this->get_logger(), "Received Pos callback triggered.");
-            auto pos = msg->pose.pose.position;
-            // RCLCPP_INFO(this->get_logger(), "Position -> x: %0.3f, y: %0.3f", pos.x, pos.y);
-            UAV_PID_Control(pos.x, pos.y);
+        RCLCPP_INFO(this->get_logger(), "UAV waypoint navigation started");
+    }
+
+private:
+    std::vector<std::pair<float, float>> waypoints_;
+    size_t wp_index_;
+    float tolerance_ = 0.5;
+    float max_amp_ = 1.0;
+    float k_p_ = 1.0;
+
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+    rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr grid_pub_;
+
+    std::string formatNeighbors(const Neighbors& neighbors) {
+        std::string result = "[";
+        for (size_t i = 0; i < neighbors.size(); ++i) {
+            result += "(" + std::to_string(neighbors[i].first) + "," + std::to_string(neighbors[i].second) + ")";
+            if (i != neighbors.size() - 1) result += ", ";
+        }
+        result += "]";
+        return result;
+    }
+
+    std::pair<int, int> continuousToGridCell(float x, float y, int grid_width, int grid_height) {
+        int grid_x = static_cast<int>(std::floor(x));
+        int grid_y = static_cast<int>(std::floor(y));
+
+        // Clamp to grid bounds
+        grid_x = std::max(0, std::min(grid_x, grid_width - 1));
+        grid_y = std::max(0, std::min(grid_y, grid_height - 1));
+
+        return {grid_x, grid_y};
+    }
+
+    float saturate(float amp) {
+        return std::max(std::min(amp, max_amp_), -max_amp_);
+    }
+
+    void stopUAV() {
+        geometry_msgs::msg::Twist msg;
+        msg.linear.x = 0.0;
+        msg.linear.y = 0.0;
+        msg.linear.z = 0.0;
+        msg.angular.z = 0.0;
+        publisher_->publish(msg);
+        RCLCPP_INFO(this->get_logger(), "All waypoints reached. UAV stopped.");
+    }
+
+    void UAV_PID_Control(float x, float y) {
+        if (wp_index_ >= waypoints_.size()) {
+            stopUAV();
+            return;
         }
 
-        rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber_;
-        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
 
+        auto grid_pos = continuousToGridCell(x, y, rows_, cols_);
+        const auto& neighbors = grid_map_[grid_pos];
+
+        geometry_msgs::msg::PoseArray pose_array;
+        pose_array.header.stamp = this->get_clock()->now();
+        pose_array.header.frame_id = "map";  // Or your world frame
+
+        for (const auto& n : neighbors) {
+            geometry_msgs::msg::Pose pose;
+            pose.position.x = static_cast<double>(n.first);
+            pose.position.y = static_cast<double>(n.second);
+            pose.position.z = 0.0;  // flat 2D grid
+            pose.orientation.w = 1.0;  // neutral rotation
+            pose_array.poses.push_back(pose);
+        }
+
+        grid_pub_->publish(pose_array);
+
+
+
+
+        float ref_x = waypoints_[wp_index_].first;
+        float ref_y = waypoints_[wp_index_].second;
+
+        float error_x = ref_x - x;
+        float error_y = ref_y - y;
+        float distance = std::hypot(error_x, error_y);
+
+        // RCLCPP_INFO(this->get_logger(), "Waypoint %zu -> Ref(%.2f, %.2f), Pos(%.2f, %.2f), Dist=%.2f",
+        //             wp_index_, ref_x, ref_y, x, y, distance);
+
+        if (distance < tolerance_) {
+            RCLCPP_INFO(this->get_logger(), "Reached waypoint %zu", wp_index_);
+            wp_index_++;
+            return;
+        }
+
+        float vx = saturate(k_p_ * error_x);
+        float vy = saturate(k_p_ * error_y);
+
+        geometry_msgs::msg::Twist msg;
+        msg.linear.x = vx;
+        msg.linear.y = vy;
+        msg.linear.z = 0.0;
+        msg.angular.z = 0.0;
+        publisher_->publish(msg);
+
+        // RCLCPP_INFO(this->get_logger(), "Command -> vx: %.2f, vy: %.2f", vx, vy);
+    }
+
+    void PosCallback(const nav_msgs::msg::Odometry::SharedPtr msg) {
+        auto pos = msg->pose.pose.position;
+        UAV_PID_Control(pos.x, pos.y);
+    }
 };
 
-
-int main(int argc, char * argv[]){
+int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
     rclcpp::spin(std::make_shared<UAV_Nav_Publisher>());
     rclcpp::shutdown();

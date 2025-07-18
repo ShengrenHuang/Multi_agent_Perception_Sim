@@ -9,6 +9,8 @@ from nav_msgs.msg import Odometry
 import subprocess
 import time
 import matplotlib.pyplot as plt
+import numpy as np
+from collections import defaultdict
 
 
 class UAVGymEnv(gym.Env):
@@ -41,7 +43,7 @@ class UAVGymEnv(gym.Env):
         print("Reset!!!")
         super().reset(seed=seed)
         self.reset_gazebo_world()
-        time.sleep(1.0)
+        time.sleep(1.0)                                                                                                                                                             
         self.send_velocity(0.0, 0.0)
 
         for _ in range(50):
@@ -133,6 +135,22 @@ def main():
     env = UAVGymEnv()
     rewards = []
 
+
+    # Q-learning 初始化
+    Q = defaultdict(lambda: np.zeros(env.action_space.n))
+    NUM_BINS = 20
+
+    def discretize(obs):
+        x_bin = min(NUM_BINS - 1, max(0, int((obs[0] + 10) / 20 * NUM_BINS)))
+        y_bin = min(NUM_BINS - 1, max(0, int((obs[1] + 10) / 20 * NUM_BINS)))
+        return (x_bin, y_bin)
+
+    alpha = 0.5     # 學習率
+    gamma = 0.99    # 折扣率
+    epsilon = 0.1   # 探索率
+    episodes = 500
+
+
     plt.ion()
     fig, ax = plt.subplots()
     line, = ax.plot([], [], label="Episode Reward")
@@ -141,16 +159,31 @@ def main():
     ax.set_title('UAV RL Reward per Episode')
     ax.legend()
 
-    for episode in range(1000):
+    for episode in range(episodes):
         print(f"\n=== Episode {episode + 1} ===")
         obs, _ = env.reset()
+        state = discretize(obs)
         done = False
         total_reward = 0.0
+
         while not done:
-            action = env.action_space.sample()
-            obs, reward, done, truncated, info = env.step(action)
+            # ε-greedy 策略選擇動作
+            if np.random.rand() < epsilon:
+                action = env.action_space.sample()
+            else:
+                action = np.argmax(Q[state])
+
+            next_obs, reward, done, _, _ = env.step(action)
+            next_state = discretize(next_obs)
+
+            # Q-learning 更新
+            best_next_action = np.max(Q[next_state])
+            Q[state][action] += alpha * (reward + gamma * best_next_action - Q[state][action])
+
+            state = next_state
             total_reward += reward
-            print(f"obs={obs}, reward={reward:.2f}, done={done}")
+
+            print(f"obs={next_obs}, reward={reward:.2f}, done={done}")
 
         rewards.append(total_reward)
         line.set_xdata(np.arange(len(rewards)))
