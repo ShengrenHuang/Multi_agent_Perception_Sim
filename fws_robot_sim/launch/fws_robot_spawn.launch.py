@@ -11,7 +11,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-
+from launch.actions import TimerAction
 
 def generate_launch_description():
     # Setup project paths
@@ -45,17 +45,22 @@ def generate_launch_description():
            ]
     )
 
+    # unset_display = SetEnvironmentVariable('DISPLAY', '')
     gazebo = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('ros_gz_sim'), 'launch'), '/gz_sim.launch.py']),
-                launch_arguments=[
-                    ('gz_args', [LaunchConfiguration('world'),
-                                 '.sdf',
-                                 ' -v 4',
-                                 ' -r']
-                    )
-                ]
-             )
+        PythonLaunchDescriptionSource([
+            os.path.join(get_package_share_directory('ros_gz_sim'), 'launch'),
+            '/gz_sim.launch.py']),
+        launch_arguments=[
+            ('gz_args', [
+                LaunchConfiguration('world'),
+                '.sdf',
+                ' -v 4',
+                ' -r',
+                ' --headless-rendering'
+            ])
+        ]
+    )
+
 
     xacro_file = os.path.join(fws_robot_description_path,
                               'robots',
@@ -181,6 +186,14 @@ def generate_launch_description():
         output='screen'
     )
 
+    delayed_controller_load = TimerAction(
+        period=20.0,
+        actions=[
+            load_joint_state_controller,
+            load_forward_velocity_controller,
+            load_forward_position_controller
+        ]
+    )
 
     return LaunchDescription([
         RegisterEventHandler(
@@ -196,13 +209,15 @@ def generate_launch_description():
                         load_forward_position_controller],
             )
         ),
+        # unset_display,
         gazebo_resource_path,
         arguments,
         gazebo,
         node_robot_state_publisher,
         gz_spawn_entity,
+        # delayed_controller_load, 
         bridge,
-        rviz,
+        # rviz,
         detection,
         gps_node,
         odometry_publisher_node,

@@ -12,6 +12,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED) 
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+# find_package(ament_index_cpp REQUIRED)
 # # Gazebo
 # find_package(gz-msgs9 REQUIRED)
 # find_package(gz-transport12 REQUIRED)
@@ -35,6 +36,7 @@ add_executable(UAV_pid_control_node src/UAV_navigation.cpp)
 ament_target_dependencies(UAV_pid_control_node
   rclcpp
   nav_msgs
+  # ament_index_cpp
   # gz-msgs9::gz-msgs9
   # gz-transport12::gz-transport12
 )

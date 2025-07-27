@@ -1,0 +1,7 @@
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:14:10:[m[K [01;31m[Kfatal error: [m[Kament_index_cpp/get_package_share_directory.hpp: No such file or directory
+   14 | #include [01;31m[K"ament_index_cpp/get_package_share_directory.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/UAV_pid_control_node.dir/build.make:76: CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:225: CMakeFiles/UAV_pid_control_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

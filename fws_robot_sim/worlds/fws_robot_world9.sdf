@@ -241,7 +241,7 @@
     <include>
         <name>Tree1</name>
         <pose>10 0 0 0 0 0</pose>
-        <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pine Tree</uri>
+        <uri>model://pine_tree</uri>
     </include>
 
 

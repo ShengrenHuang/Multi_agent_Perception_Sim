@@ -1,0 +1,56 @@
+[0.108s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[0.210s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.218s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.221s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.238s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.240s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.245s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.283s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.284s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.326s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.358s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.369s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[0.390s] -- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)
+[0.396s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.409s] -- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)
+[0.411s] -- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[0.412s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.413s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.517s] -- Configuring done (0.4s)
+[0.535s] -- Generating done (0.0s)
+[0.540s] -- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[0.573s] [ 46%] Built target talker
+[0.573s] [ 46%] Built target listener
+[0.574s] [ 46%] Built target UAV_pid_control_node
+[0.574s] [ 53%] [32mBuilding CXX object CMakeFiles/Robot_pid_control_node.dir/src/Robot_navigation.cpp.o[0m
+[0.575s] [ 69%] Built target image_processor_node
+[0.586s] [ 92%] Built target odometry_publisher_node
+[5.848s] [100%] [32m[1mLinking CXX executable Robot_pid_control_node[0m
+[6.074s] [100%] Built target Robot_pid_control_node
+[6.082s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application -- -j32 -l32
+[6.082s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[6.087s] -- Install configuration: ""
+[6.087s] -- Execute custom install script
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/talker
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/listener
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/image_processor_node
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/UAV_pid_control_node
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/Robot_pid_control_node
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/lib/ros_gz_example_application/odometry_publisher_node
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_application
+[6.087s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_application
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/ament_prefix_path.sh
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/ament_prefix_path.dsv
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/path.sh
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/environment/path.dsv
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.bash
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.sh
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.zsh
+[6.088s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/local_setup.dsv
+[6.088s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/package.dsv
+[6.098s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ament_index/resource_index/packages/ros_gz_example_application
+[6.098s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/cmake/ros_gz_example_applicationConfig.cmake
+[6.098s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/cmake/ros_gz_example_applicationConfig-version.cmake
+[6.098s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_application/share/ros_gz_example_application/package.xml
+[6.099s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application

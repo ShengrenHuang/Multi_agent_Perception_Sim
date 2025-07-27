@@ -1,4 +1,4 @@
-#!/home/cirl/ros2_rl_env/bin/python3
+#!/usr/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'ros-rl','console_scripts','uav_rl_env'
 import re
 import sys

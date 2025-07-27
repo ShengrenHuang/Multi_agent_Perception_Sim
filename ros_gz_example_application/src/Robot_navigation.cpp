@@ -12,6 +12,8 @@
 #include <string>   // for to_string
 #include "geometry_msgs/msg/pose_array.hpp"
 #include "geometry_msgs/msg/pose.hpp"
+#include "std_msgs/msg/int32.hpp"
+#include <fstream>
 
 class RobotNavController : public rclcpp::Node {
     using State = std::pair<int, int>;
@@ -37,14 +39,27 @@ public:
         steer_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>(
             "/forward_position_controller/commands", 10);
 
+        wp_index_pub_ = this->create_publisher<std_msgs::msg::Int32>("/robot/waypoint_index", 10);
+
+
         grid_pub_ = this->create_publisher<geometry_msgs::msg::PoseArray>("/robot/adjacent_cells", 10);
 
-        waypoints_ = {
-            {5.0f, 5.0f},
-            {5.0f, 0.0f},
-            {10.0f, 6.0f},
-            {0.0f, 0.0f}
-        };
+        // Define waypoints
+        std::string waypoint_file = "/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/robot.txt";
+        if (!loadWaypointsFromFile(waypoint_file)) {
+            rclcpp::shutdown();  // Exit if file loading fails
+            return;
+        }
+
+        // waypoints_ = {
+        //     {1.0f, 0.0f},
+        //     {1.0f, 1.0f},
+        //     {2.0f, 1.0f},
+        //     {2.0f, 2.0f},
+        //     {2.0f, 3.0f},
+        //     {2.0f, 4.0f},
+        //     {2.0f, 5.0f},
+        // };
 
 
         std::vector<State> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -91,6 +106,24 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr wheel_pub_;
     rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr steer_pub_;
     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr grid_pub_;
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr wp_index_pub_;
+
+    bool loadWaypointsFromFile(const std::string& filename) {
+        std::ifstream infile(filename);
+        if (!infile.is_open()) {
+            RCLCPP_ERROR(this->get_logger(), "Failed to open waypoint file: %s", filename.c_str());
+            return false;
+        }
+
+        float x, y;
+        waypoints_.clear();
+        while (infile >> x >> y) {
+            waypoints_.emplace_back(x, y);
+        }
+
+        RCLCPP_INFO(this->get_logger(), "Loaded %zu waypoints from %s", waypoints_.size(), filename.c_str());
+        return true;
+    }
 
     std::string formatNeighbors(const Neighbors& neighbors) {
         std::string result = "[";
@@ -180,10 +213,16 @@ private:
 
         // RCLCPP_INFO(this->get_logger(),
         //         "Current (%.2f, %.2f) Dist=%.2f", x, y, distance);
-
+        std_msgs::msg::Int32 index_msg;
+        index_msg.data = static_cast<int>(wp_index_);
+        wp_index_pub_->publish(index_msg);
         if (distance < tolerance) {
             // RCLCPP_INFO(this->get_logger(), "Waypoint %zu reached.", wp_index_);
             wp_index_++;
+            // Publish updated index
+            std_msgs::msg::Int32 index_msg;
+            index_msg.data = static_cast<int>(wp_index_);
+            wp_index_pub_->publish(index_msg);
             return;
         }
 

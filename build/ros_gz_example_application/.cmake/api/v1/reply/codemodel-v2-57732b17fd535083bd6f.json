@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f1b73b4452142b79d199.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ros_gz_example_application",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Robot_pid_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Robot_pid_control_node-5bdfeb7cd5bd15922553.json",
+					"name" : "Robot_pid_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UAV_pid_control_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UAV_pid_control_node-cff5599318a8754ef6d6.json",
+					"name" : "UAV_pid_control_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image_processor_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image_processor_node-2326deab086f5fbd984b.json",
+					"name" : "image_processor_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-listener-4b2285bc0df77e71bce6.json",
+					"name" : "listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odometry_publisher_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odometry_publisher_node-efd4cf12d37c4f4ee570.json",
+					"name" : "odometry_publisher_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ros_gz_example_application_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ros_gz_example_application_uninstall-391fc9021bea87f78914.json",
+					"name" : "ros_gz_example_application_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "talker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-talker-2e5c1d6edbb35e6b3626.json",
+					"name" : "talker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c4fa28a365229671a491.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/cirl/ros_gz_project_template-main/build/ros_gz_example_application",
+		"source" : "/home/cirl/ros_gz_project_template-main/ros_gz_example_application"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

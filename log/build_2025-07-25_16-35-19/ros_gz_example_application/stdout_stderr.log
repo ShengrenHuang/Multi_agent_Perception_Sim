@@ -1,0 +1,55 @@
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+-- Found image_transport: 5.1.6 (/opt/ros/jazzy/share/image_transport/cmake)
+-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found tf2: 0.36.9 (/opt/ros/jazzy/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.36.9 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/cirl/ros_gz_project_template-main/build/ros_gz_example_application
+[ 15%] Built target listener
+[ 46%] Built target talker
+[ 46%] Built target image_processor_node
+[ 53%] [32mBuilding CXX object CMakeFiles/UAV_pid_control_node.dir/src/UAV_navigation.cpp.o[0m
+[ 69%] Built target Robot_pid_control_node
+[ 92%] Built target odometry_publisher_node
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:3[m[K:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:[m[K In member function ‘[01m[Kvoid UAV_Nav_Publisher::[01;32m[KUAV_PID_Control[m[K(float, float)[m[K’:
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:154:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  154 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"UAV paused: index (%d) > robot_index (%d) + 1"[m[K, [32m[Kwp_index_[m[K, robot_index_);
+      |                                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~[m[K
+      |                                                                                              [32m[K|[m[K
+      |                                                                                              [32m[Ksize_t {aka long unsigned int}[m[K
+[01m[K/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/UAV_navigation.cpp:154:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  154 |             RCLCPP_INFO(this->get_logger(), "UAV paused: index ([01;36m[K%d[m[K) > robot_index (%d) + 1", wp_index_, robot_index_);
+      |                                                                 [01;36m[K~^[m[K
+      |                                                                  [01;36m[K|[m[K
+      |                                                                  [01;36m[Kint[m[K
+      |                                                                 [32m[K%ld[m[K
+[100%] [32m[1mLinking CXX executable UAV_pid_control_node[0m
+[100%] Built target UAV_pid_control_node
+-- Install configuration: ""
+-- Execute custom install script
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/cirl/ros_gz_project_template-main/ros_gz_example_application/trajectory_bag'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

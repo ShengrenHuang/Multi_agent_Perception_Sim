@@ -9,6 +9,8 @@
 #include <string>   // for to_string
 #include "geometry_msgs/msg/pose_array.hpp"
 #include "geometry_msgs/msg/pose.hpp"
+#include "std_msgs/msg/int32.hpp"
+#include <fstream>
 
 
 class UAV_Nav_Publisher : public rclcpp::Node {
@@ -25,15 +27,26 @@ public:
             std::bind(&UAV_Nav_Publisher::PosCallback, this, std::placeholders::_1));
 
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/x3/cmd_vel", 10);
-
+        wp_index_pub_ = this->create_publisher<std_msgs::msg::Int32>("/uav/waypoint_index", 10);
+        robot_index_sub_ = this->create_subscription<std_msgs::msg::Int32>(
+            "/robot/waypoint_index", 10,
+            std::bind(&UAV_Nav_Publisher::RobotIndexCallback, this, std::placeholders::_1));
         grid_pub_ = this->create_publisher<geometry_msgs::msg::PoseArray>("/uav/adjacent_cells", 10);
         // Define waypoints
-        waypoints_ = {
-            {5.0f, 5.0f},
-            {5.0f, 0.0f},
-            {10.0f, 6.0f},
-            {0.0f, 0.0f}
-        };
+        std::string waypoint_file = "/home/cirl/ros_gz_project_template-main/ros_gz_example_application/src/uav.txt";
+        if (!loadWaypointsFromFile(waypoint_file)) {
+            rclcpp::shutdown();  // Exit if file loading fails
+            return;
+        }
+        // waypoints_ = {
+        //     {1.0f, 0.0f},
+        //     {1.0f, 1.0f},
+        //     {2.0f, 1.0f},
+        //     {2.0f, 2.0f},
+        //     {2.0f, 3.0f},
+        //     {2.0f, 4.0f},
+        //     {2.0f, 5.0f},
+        // };
 
         std::vector<State> directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
@@ -64,10 +77,31 @@ private:
     float tolerance_ = 0.5;
     float max_amp_ = 1.0;
     float k_p_ = 1.0;
+    int robot_index_ = 0;
 
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::Publisher<geometry_msgs::msg::PoseArray>::SharedPtr grid_pub_;
+    rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr wp_index_pub_;
+    rclcpp::Subscription<std_msgs::msg::Int32>::SharedPtr robot_index_sub_;
+
+
+    bool loadWaypointsFromFile(const std::string& filename) {
+        std::ifstream infile(filename);
+        if (!infile.is_open()) {
+            RCLCPP_ERROR(this->get_logger(), "Failed to open waypoint file: %s", filename.c_str());
+            return false;
+        }
+
+        float x, y;
+        waypoints_.clear();
+        while (infile >> x >> y) {
+            waypoints_.emplace_back(x, y);
+        }
+
+        RCLCPP_INFO(this->get_logger(), "Loaded %zu waypoints from %s", waypoints_.size(), filename.c_str());
+        return true;
+    }
 
     std::string formatNeighbors(const Neighbors& neighbors) {
         std::string result = "[";
@@ -77,6 +111,10 @@ private:
         }
         result += "]";
         return result;
+    }
+
+    void RobotIndexCallback(const std_msgs::msg::Int32::SharedPtr msg) {
+        robot_index_ = msg->data;
     }
 
     std::pair<int, int> continuousToGridCell(float x, float y, int grid_width, int grid_height) {
@@ -110,6 +148,11 @@ private:
             return;
         }
 
+        if (static_cast<int>(wp_index_) > robot_index_) {
+            stopUAV();
+            RCLCPP_INFO(this->get_logger(), "UAV paused: index (%d) > robot_index (%d) + 1", wp_index_, robot_index_);
+            return;
+        }
 
         auto grid_pos = continuousToGridCell(x, y, rows_, cols_);
         const auto& neighbors = grid_map_[grid_pos];
@@ -141,12 +184,19 @@ private:
 
         // RCLCPP_INFO(this->get_logger(), "Waypoint %zu -> Ref(%.2f, %.2f), Pos(%.2f, %.2f), Dist=%.2f",
         //             wp_index_, ref_x, ref_y, x, y, distance);
-
+        std_msgs::msg::Int32 index_msg;
+        index_msg.data = static_cast<int>(wp_index_);
+        wp_index_pub_->publish(index_msg);
         if (distance < tolerance_) {
             RCLCPP_INFO(this->get_logger(), "Reached waypoint %zu", wp_index_);
             wp_index_++;
+            // Publish updated index
+            std_msgs::msg::Int32 index_msg;
+            index_msg.data = static_cast<int>(wp_index_);
+            wp_index_pub_->publish(index_msg);
             return;
         }
+
 
         float vx = saturate(k_p_ * error_x);
         float vy = saturate(k_p_ * error_y);

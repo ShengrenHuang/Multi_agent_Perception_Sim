@@ -1,0 +1,100 @@
+[0.015s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_robot_sim -- -j32 -l32
+[0.228s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/fws_robot_sim -- -j32 -l32
+[0.229s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_robot_sim
+[0.234s] -- Install configuration: ""
+[0.235s] -- Execute custom install script
+[0.235s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/launch/fws_robot_spawn.launch.py
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world2.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world3.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world4.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world5.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world6.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world7.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world8.sdf
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world9.sdf
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/asphalt.png
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/house.png
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/Textures/muds.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/house.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road.stl
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road2.stl
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road3.stl
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road4.stl
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/media/road_1.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model.config
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/house_1/model.sdf
+[0.243s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/materials/scripts/caster_fp.glsl
+[0.244s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/materials/scripts/caster_vp.glsl
+[0.251s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/materials/scripts/pine_tree.material
+[0.255s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/materials/textures/bark_diffuse.png
+[0.260s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/materials/textures/branch_2_diffuse.png
+[0.264s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/meshes/pine_tree.dae
+[0.271s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/model.config
+[0.276s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/model.sdf
+[0.282s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/thumbnails/1.png
+[0.287s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/thumbnails/2.png
+[0.291s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/thumbnails/3.png
+[0.297s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/thumbnails/4.png
+[0.303s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/pine_tree/thumbnails/5.png
+[0.309s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/Textures/asphalt.png
+[0.309s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/Textures/muds.jpg
+[0.309s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road.stl
+[0.309s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road2.stl
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road3.stl
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road4.stl
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/media/road_1.dae
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model.config
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/road_1/model.sdf
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Rock1.dae
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Rock2.dae
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Textures/Rock-Texture-Surface.jpg
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/media/Textures/black-stone.png
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model.config
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/rock_1/model.sdf
+[0.310s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/media/Textures/Grass.png
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/media/terrain_1.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model.config
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/terrain_1/model.sdf
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/ardrone.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/firefly.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/hummingbird.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/iris.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11_propeller_ccw.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo11_propeller_cw.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9_propeller_ccw.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/neo9_propeller_cw.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/pelican.dae
+[0.311s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/propeller_ccw.dae
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/propeller_cw.dae
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_camera.dae
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_camera.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_sensor.dae
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/vi_sensor.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/x3.dae
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/meshes/x3.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/model.config
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/model.sdf
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/1.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/2.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/3.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/4.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/x3/thumbnails/5.jpg
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/package_run_dependencies/fws_robot_sim
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/parent_prefix_path/fws_robot_sim
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/ament_prefix_path.sh
+[0.312s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/ament_prefix_path.dsv
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/path.sh
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/environment/path.dsv
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.bash
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.sh
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.zsh
+[0.313s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/local_setup.dsv
+[0.313s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/package.dsv
+[0.316s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/ament_index/resource_index/packages/fws_robot_sim
+[0.316s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/cmake/fws_robot_simConfig.cmake
+[0.316s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/cmake/fws_robot_simConfig-version.cmake
+[0.316s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/package.xml
+[0.317s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/fws_robot_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/fws_robot_sim
