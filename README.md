@@ -3,9 +3,10 @@
 This project integrates **ROS 2 Jazzy** and the **Gazebo Harmonic** simulator to simulate and visualize multi-agent perception.
 
 Based on the official template:  
-👉 https://github.com/gazebosim/ros_gz_project_template    
-and the four-wheel robot project from Robot Mania:    
-👉 https://drive.google.com/drive/folders/1fItPBetV3NpT3pA2hoz1FrcOJVR3gkmV
+👉 [ros_gz_project_template](https://github.com/gazebosim/ros_gz_project_template)  
+and the four-wheel robot project from Robot Mania:  
+👉 [Robot Mania four-wheel robot](https://drive.google.com/drive/folders/1fItPBetV3NpT3pA2hoz1FrcOJVR3gkmV)
+
 ---
 
 ## 🖥️ Environment
