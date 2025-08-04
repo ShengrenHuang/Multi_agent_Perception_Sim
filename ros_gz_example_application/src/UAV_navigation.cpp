@@ -75,8 +75,8 @@ private:
     std::vector<std::pair<float, float>> waypoints_;
     size_t wp_index_;
     float tolerance_ = 0.5;
-    float max_amp_ = 1.0;
-    float k_p_ = 1.0;
+    float max_amp_ = 1.0;  //1.0
+    float k_p_ = 1.0;   //1.0
     int robot_index_ = 0;
 
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscriber_;
@@ -94,9 +94,10 @@ private:
         }
 
         float x, y;
+        float scale_factor = 1.0;
         waypoints_.clear();
         while (infile >> x >> y) {
-            waypoints_.emplace_back(x, y);
+            waypoints_.emplace_back(scale_factor*x, scale_factor*y);
         }
 
         RCLCPP_INFO(this->get_logger(), "Loaded %zu waypoints from %s", waypoints_.size(), filename.c_str());

@@ -91,7 +91,7 @@ private:
     // float ref_y = 5.0;
     float tolerance = 0.3;
     float max_steering = M_PI / 4;
-    float max_speed = 50.0;
+    float max_speed = 100.0;  //50
 
     bool initialized_;
     bool imu_received_;
@@ -116,9 +116,10 @@ private:
         }
 
         float x, y;
+        float scale_factor = 1.0;
         waypoints_.clear();
         while (infile >> x >> y) {
-            waypoints_.emplace_back(x, y);
+            waypoints_.emplace_back(scale_factor*x, scale_factor*y);
         }
 
         RCLCPP_INFO(this->get_logger(), "Loaded %zu waypoints from %s", waypoints_.size(), filename.c_str());
@@ -265,12 +266,12 @@ private:
 
             if (sign > 0) {
                 // Counter-clockwise
-                vel_cmd.data = {-1.0, 1.0, -1.0, 1.0};
+                vel_cmd.data = {-5.0, 5.0, -5.0, 5.0};    // {-1.0, 1.0, -1.0, 1.0};
                 steer_cmd.data = {-0.5, 0.5, 0.5, -0.5};
                 RCLCPP_INFO(this->get_logger(), "Pivot Turn: Counter-Clockwise");
             } else {
                 // Clockwise
-                vel_cmd.data = {1.0, -1.0, 1.0, -1.0};
+                vel_cmd.data = {5.0, -5.0, 5.0, -5.0};    // {1.0, -1.0, 1.0, -1.0};
                 steer_cmd.data = {-0.5, 0.5, 0.5, -0.5};
                 RCLCPP_INFO(this->get_logger(), "Pivot Turn: Clockwise");
             }
@@ -293,7 +294,7 @@ private:
 
         // Calculate speed with direction
         float direction = std::cos(yaw_error);  // < 0 means backwards
-        float speed = saturate(distance * 20.0, max_speed) * direction;
+        float speed = saturate(distance * 50.0, max_speed) * direction;   //20
         std_msgs::msg::Float64MultiArray vel_cmd;
         vel_cmd.data = {speed, speed, speed, speed};
         wheel_pub_->publish(vel_cmd);

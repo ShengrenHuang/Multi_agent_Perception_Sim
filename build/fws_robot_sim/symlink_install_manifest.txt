@@ -1,4 +1,16 @@
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/launch/fws_robot_spawn.launch.py
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_blue/meshes/cone.stl
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_blue/model.config
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_blue/model.sdf
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_blue/thumbnails/Screenshot from 2025-07-05 15-09-02.png
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_red/meshes/cone.stl
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_red/model.config
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_red/model.sdf
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_red/thumbnails/Screenshot from 2025-07-05 15-17-11.png
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_yellow/meshes/cone.stl
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_yellow/model.config
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_yellow/model.sdf
+/home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/cone_yellow/thumbnails/Screenshot from 2025-07-05 15-12-53.png
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world.sdf
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world2.sdf
 /home/cirl/ros_gz_project_template-main/install/fws_robot_sim/share/fws_robot_sim/worlds/fws_robot_world3.sdf

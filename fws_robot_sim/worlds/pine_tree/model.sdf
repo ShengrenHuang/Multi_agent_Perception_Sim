@@ -16,7 +16,8 @@
                         <submesh>
                             <name>Branch</name>
                         </submesh>
-                    </mesh>
+                    <scale>0.5 0.5 0.5</scale>
+                    </mesh>   
                 </geometry>
                 <material>
                     <double_sided>true</double_sided>
@@ -40,6 +41,7 @@
                         <submesh>
                             <name>Bark</name>
                         </submesh>
+                    <scale>0.5 0.5 0.5</scale>
                     </mesh>
                 </geometry>
                 <material>

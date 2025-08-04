@@ -1,0 +1,60 @@
+[0.018s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_description -- -j32 -l32
+[0.231s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cirl/ros_gz_project_template-main/build/ros_gz_example_description -- -j32 -l32
+[0.237s] Invoking command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/ros_gz_example_description
+[0.241s] -- Install configuration: ""
+[0.241s] -- Execute custom install script
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.config
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/diff_drive/model.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/road_1/media/Textures/Road.png
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/road_1/media/road_1.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/road_1/model.config
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/road_1/model.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/rrbot/model.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/terrain_1/media/Textures/Grass.png
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/terrain_1/media/terrain_1.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/terrain_1/model.config
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/terrain_1/model.sdf
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/ardrone.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/firefly.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/hummingbird.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/iris.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11_propeller_ccw.dae
+[0.242s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo11_propeller_cw.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9_propeller_ccw.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/neo9_propeller_cw.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/pelican.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/propeller_ccw.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/propeller_cw.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_camera.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_camera.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_sensor.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/vi_sensor.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/x3.dae
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/meshes/x3.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/model.config
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/model.sdf
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/1.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/2.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/3.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/4.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/models/x3/thumbnails/5.jpg
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.dsv
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/ros_gz_example_description.sh
+[0.243s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_description
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_description
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.sh
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/ament_prefix_path.dsv
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.sh
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/environment/path.dsv
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.bash
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.sh
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.zsh
+[0.244s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/local_setup.dsv
+[0.244s] -- Symlinking: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/package.dsv
+[0.262s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ament_index/resource_index/packages/ros_gz_example_description
+[0.262s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig.cmake
+[0.262s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/cmake/ros_gz_example_descriptionConfig-version.cmake
+[0.262s] -- Up-to-date symlink: /home/cirl/ros_gz_project_template-main/install/ros_gz_example_description/share/ros_gz_example_description/package.xml
+[0.265s] Invoked command in '/home/cirl/ros_gz_project_template-main/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cirl/ros_gz_project_template-main/install/ros_rl:/home/cirl/ros_gz_project_template-main/install/gps_to_gazebo:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cirl/ros_gz_project_template-main/build/ros_gz_example_description
